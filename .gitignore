@@ -6,3 +6,7 @@ DerivedData/
 ## Various settings
 *.pbxuser
 xcuserdata/
+
+## Coco Pods
+Podfile.lock
+Pods/

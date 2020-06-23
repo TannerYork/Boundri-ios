@@ -10,23 +10,23 @@ import UIKit
 import AVFoundation
 
 class CameraVC: UIViewController {
-
+    
     //MARK: Properties
     @IBOutlet var cameraView: UIView!
     
     let captureSession = AVCaptureSession()
     let settings = AVCapturePhotoSettings()
     var previewLayer: AVCaptureVideoPreviewLayer?
-
+    
     //Input
     var frontCamera: AVCaptureDevice?
     var backCamera: AVCaptureDevice?
     var currentCamera: AVCaptureDevice?
-
+    
     //Output
     var output: AVCapturePhotoOutput?
     var imageCaptured: UIImage?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForPhotoAccess()
@@ -119,10 +119,10 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
         
         //Configure the session with the output or capturing the image
         output = AVCapturePhotoOutput()
-         output!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
+        output!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
         
         //Configure settings
-//        settings.isAutoStillImageStabilizationEnabled = true
+        //        settings.isAutoStillImageStabilizationEnabled = true
         settings.isHighResolutionPhotoEnabled = false
         settings.flashMode = .auto
         
@@ -157,16 +157,16 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
     }
     
     //Gets the output of the captures photo button
-        func photoOutput(_ output: AVCapturePhotoOutput,
-                           didFinishProcessingPhoto photo: AVCapturePhoto,error: Error?) {
-            let imageData = photo.fileDataRepresentation()
-            guard let capturedImage = UIImage.init(data: imageData!, scale: 1.0) else {
-                print("Error setting image data to UIImage")
-                return
-            }
-            
-                imageCaptured = capturedImage
-                self.performSegue(withIdentifier: "segueToImageView", sender: self)
+    func photoOutput(_ output: AVCapturePhotoOutput,
+                     didFinishProcessingPhoto photo: AVCapturePhoto,error: Error?) {
+        let imageData = photo.fileDataRepresentation()
+        guard let capturedImage = UIImage.init(data: imageData!, scale: 1.0) else {
+            print("Error setting image data to UIImage")
+            return
         }
+        
+        imageCaptured = capturedImage
+        self.performSegue(withIdentifier: "segueToImageView", sender: self)
+    }
     
 }
