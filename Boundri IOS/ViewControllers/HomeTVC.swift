@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+
+class HomeTVC: UITableViewController {
+    
+    //MARK: Properties
+    @IBOutlet weak var OptionsTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+}
+ 
