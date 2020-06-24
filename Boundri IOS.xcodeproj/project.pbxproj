@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -109,8 +109,21 @@
 				E77E285F86034481B151F09C /* Pods-Boundri IOSTests.debug.xcconfig */,
 				65736443A7F6F82EE032D758 /* Pods-Boundri IOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E529B9C224A3C810002A3E60 /* SiriKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SiriKit;
+			sourceTree = "<group>";
+		};
+		E529B9C324A3C81A002A3E60 /* CloudVisionAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CloudVisionAPI;
 			sourceTree = "<group>";
 		};
 		E5CF869124A0205B00EB96AB = {
@@ -137,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				E5CF869D24A0205B00EB96AB /* AppDelegate.swift */,
+				E529B9C324A3C81A002A3E60 /* CloudVisionAPI */,
+				E529B9C224A3C810002A3E60 /* SiriKit */,
 				E5CF86CF24A023F400EB96AB /* ViewControllers */,
 				E5CF86A624A0206100EB96AB /* Assets.xcassets */,
 				E5CF86AB24A0206100EB96AB /* Info.plist */,

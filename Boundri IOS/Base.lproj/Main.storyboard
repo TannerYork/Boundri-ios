@@ -194,7 +194,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAu-R8-EDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1818.840579710145" y="207.58928571428569"/>
+            <point key="canvasLocation" x="2072" y="208"/>
         </scene>
         <!--About-->
         <scene sceneID="ofc-9O-0O8">
@@ -247,16 +247,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Thank you for using Boundri visual helper! How are you liking it?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sob-DE-abp">
-                                <rect key="frame" x="20" y="121" width="374" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="We'd love to hear about anything you like and don't like about the helper so that we can continue making improvments." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5mk-2G-LlR">
                                 <rect key="frame" x="20" y="178" width="374" height="73.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -275,6 +265,16 @@
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Thank you for using Boundri visual helper!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sob-DE-abp">
+                                <rect key="frame" x="20" y="129" width="374" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.94173765180000002" green="0.95244258640000001" blue="0.98431938890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="foB-W5-EFP"/>
@@ -283,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKI-Ag-gW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3624.6376811594205" y="578.57142857142856"/>
+            <point key="canvasLocation" x="3748" y="579"/>
         </scene>
         <!--Siri Settings-->
         <scene sceneID="vcK-1Y-9ak">
@@ -407,7 +407,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgf-rD-b7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063.768115942029" y="207.58928571428569"/>
+            <point key="canvasLocation" x="1183" y="208"/>
         </scene>
         <!--Account-->
         <scene sceneID="9YB-4K-0Kn">
@@ -435,9 +435,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Last" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-eg-1fn">
-                                                    <rect key="frame" x="20" y="35" width="374" height="34"/>
+                                                    <rect key="frame" x="20" y="36" width="374" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="19"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -458,9 +458,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example.email@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3t-8U-8rk">
-                                                    <rect key="frame" x="20" y="35" width="374" height="34"/>
+                                                    <rect key="frame" x="20" y="36" width="374" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="19"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -500,7 +500,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqK-rp-R7S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3624.6376811594205" y="-139.28571428571428"/>
+            <point key="canvasLocation" x="3748" y="-139"/>
         </scene>
         <!--Text Detection-->
         <scene sceneID="e4C-z1-AWZ">
@@ -543,7 +543,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAu-gb-hul" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Yh2-dR-dMp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3726.0869565217395" y="-799.55357142857144"/>
+            <point key="canvasLocation" x="3748" y="-800"/>
         </scene>
         <!--Image ViewVC-->
         <scene sceneID="or4-DI-lkW">
@@ -591,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQq-Tx-bf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4534.7826086956529" y="-799.55357142857144"/>
+            <point key="canvasLocation" x="4661" y="-800"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8rw-lx-qfC">
@@ -610,7 +610,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zd-N1-0R8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2815.9420289855075" y="-799.55357142857144"/>
+            <point key="canvasLocation" x="2816" y="-800"/>
         </scene>
     </scenes>
     <resources>
