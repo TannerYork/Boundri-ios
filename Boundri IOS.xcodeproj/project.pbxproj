@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4482AE1D030C9C6106FA8F7C /* Pods_Boundri_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776B20CD4F48AC78218B84C1 /* Pods_Boundri_IOS.framework */; };
 		7D628CA360D1C3984EAFDB41 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55C3A37875B941A574C91D2 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework */; };
+		E529B9C524A3DBE0002A3E60 /* CloudVisionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529B9C424A3DBE0002A3E60 /* CloudVisionAPI.swift */; };
+		E529B9C724A3DBF6002A3E60 /* SiriKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529B9C624A3DBF6002A3E60 /* SiriKit.swift */; };
+		E57D7D6124A8F95500C09A03 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D7D6024A8F95500C09A03 /* SettingsTVC.swift */; };
 		E5CF869E24A0205B00EB96AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869D24A0205B00EB96AB /* AppDelegate.swift */; };
 		E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */; };
 		E5CF86A524A0205B00EB96AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CF86A324A0205B00EB96AB /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 		A55C3A37875B941A574C91D2 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boundri_IOS_Boundri_IOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE10927030BE7AF0AA4020FF /* Pods-Boundri IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS.release.xcconfig"; path = "Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS.release.xcconfig"; sourceTree = "<group>"; };
 		D89D08DF759B46E28DBFCA93 /* Pods-Boundri IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS.debug.xcconfig"; path = "Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E529B9C424A3DBE0002A3E60 /* CloudVisionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVisionAPI.swift; sourceTree = "<group>"; };
+		E529B9C624A3DBF6002A3E60 /* SiriKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriKit.swift; sourceTree = "<group>"; };
+		E57D7D6024A8F95500C09A03 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		E5CF869A24A0205B00EB96AB /* Boundri IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boundri IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CF869D24A0205B00EB96AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		E529B9C224A3C810002A3E60 /* SiriKit */ = {
 			isa = PBXGroup;
 			children = (
+				E529B9C624A3DBF6002A3E60 /* SiriKit.swift */,
 			);
 			path = SiriKit;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 		E529B9C324A3C81A002A3E60 /* CloudVisionAPI */ = {
 			isa = PBXGroup;
 			children = (
+				E529B9C424A3DBE0002A3E60 /* CloudVisionAPI.swift */,
 			);
 			path = CloudVisionAPI;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 				E5CF871124A118D500EB96AB /* HomeTVC.swift */,
 				E5CF871324A1282B00EB96AB /* CameraVC.swift */,
 				E5CF871724A12C0C00EB96AB /* ImageViewVC.swift */,
+				E57D7D6024A8F95500C09A03 /* SettingsTVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -449,8 +458,11 @@
 			files = (
 				E5CF869E24A0205B00EB96AB /* AppDelegate.swift in Sources */,
 				E5CF871824A12C0C00EB96AB /* ImageViewVC.swift in Sources */,
+				E57D7D6124A8F95500C09A03 /* SettingsTVC.swift in Sources */,
 				E5CF871224A118D500EB96AB /* HomeTVC.swift in Sources */,
+				E529B9C724A3DBF6002A3E60 /* SiriKit.swift in Sources */,
 				E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */,
+				E529B9C524A3DBE0002A3E60 /* CloudVisionAPI.swift in Sources */,
 				E5CF871424A1282B00EB96AB /* CameraVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

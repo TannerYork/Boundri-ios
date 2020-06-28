@@ -59,22 +59,7 @@ class ImageViewVC: UIViewController {
 //            }
         }
     }
-    
-    //MARK: Actions
-    //    @IBAction func sendknockOut(_ sender: Any) {
-    //        guard selectedPlayer != nil else {
-    //            choosePlayerButton.setTitleColor(UIColor(red:1.00, green:0.29, blue:0.32, alpha:1.0), for: .normal)
-    //            return
-    //        }
-    //        FirestoreData.shared.addImage(imageToPresent!, of: selectedPlayer!, to: GameSession.shared.PlayerSession ?? GameSession.shared.AdminSession!, onComplete: { bool in
-    //            if bool == true {
-    //                self.dismiss(animated: true)
-    //            } else {
-    //                print("Error sending knockout")
-    //                Alerts.presentKnockOutErrorAlert(from: self)
-    //            }
-    //        })
-    //    }
+        
     
     
     //MARK: FrameView
