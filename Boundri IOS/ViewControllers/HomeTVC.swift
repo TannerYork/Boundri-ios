@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class HomeTVC: UITableViewController {
-    
-    //MARK: Properties
-    @IBOutlet weak var OptionsTableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+        tableView.deselectRow(at:indexPath, animated: true)
     }
 }
  
