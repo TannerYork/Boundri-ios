@@ -139,9 +139,9 @@
 		E5C4390824B0E73200DA5FA9 /* DemoViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5C4390924B0ED6A00DA5FA9 /* VisionCell.swift */,
 				E5CF871324A1282B00EB96AB /* CameraVC.swift */,
 				E5CF871724A12C0C00EB96AB /* ImageViewVC.swift */,
-				E5C4390924B0ED6A00DA5FA9 /* VisionCell.swift */,
 			);
 			name = DemoViewControllers;
 			path = ../..;
