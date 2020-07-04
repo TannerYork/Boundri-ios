@@ -78,7 +78,7 @@ func imageEvaluate(evaluation: String, image: String) {
     task.resume()
 }
 
-imageEvaluate(evaluation: "TEXT_DETECTION",image:"https://www.yeschinesefood.com/images/menu1.jpg")
+//imageEvaluate(evaluation: "TEXT_DETECTION",image:"https://www.yeschinesefood.com/images/menu1.jpg")
 
 
 
