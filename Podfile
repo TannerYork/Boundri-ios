@@ -7,6 +7,7 @@ target 'Boundri IOS' do
 
   # Pods for Boundri IOS
   pod 'GoogleMLKit/TextRecognition'
+  pod 'GoogleMLKit/ImageLabeling'
 
   target 'Boundri IOSTests' do
     inherit! :search_paths

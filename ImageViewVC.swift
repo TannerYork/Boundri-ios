@@ -16,6 +16,7 @@ class ImageViewVC: UIViewController {
     @IBOutlet weak var imageText: UITextView!
 
     var imageToPresent: UIImage!
+    var visionOption: String!
     var frameSublayer = CALayer()
     
     
@@ -28,36 +29,36 @@ class ImageViewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = imageToPresent
-        imageView.layer.addSublayer(frameSublayer)
         
         //MARK: Google OCR
         let image = self.imageView.image!
         let visionImage = VisionImage(image: image)
         visionImage.orientation = image.imageOrientation
-        let textRecognizer = TextRecognizer.textRecognizer()
         
-        print("Starting Text Recognistion")
-        textRecognizer.process(visionImage) { result, error in
-            guard error == nil, let result = result else {
-                // Error handling
-                return
+        if visionOption == "scene" {
+            let options = ImageLabelerOptions()
+            options.confidenceThreshold = 0.8
+            let labeler = ImageLabeler.imageLabeler(options: options)
+            
+            var label_arr: [String] = []
+            labeler.process(visionImage) { labels, error in
+                guard error == nil, let labels = labels else { return }
+                print(labels)
+                for label in labels { label_arr.append(label.text) }
+                self.imageText.text = label_arr.joined(separator: ", ")
             }
             
-            print("Adding FrameViews ")
-            // Recognized text
-            self.imageText.text = result.text
-//            for block in result.blocks {
-//                for line in block.lines {
-//                    for element in line.elements {
-//                        self.addFrameView(
-//                            featureFrame: element.frame,
-//                            imageSize: image.size,
-//                            viewFrame: self.imageView.frame,
-//                            text: element.text
-//                        )                            }
-//                }
-//            }
+        } else if visionOption == "text" {
+            let textRecognizer = TextRecognizer.textRecognizer()
+            textRecognizer.process(visionImage) { result, error in
+                guard error == nil, let result = result else { return }
+                // Recognized text
+                self.imageText.text = result.text
+            }
+        } else {
+            self.imageText.text = "Error: Did not receive vision option."
         }
+        
     }
         
     
