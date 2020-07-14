@@ -9,7 +9,7 @@
 import UIKit
 import MLKit
 
-class ImageViewVC: UIViewController {
+class ImageViewVCwithSiri: UIViewController {
     
     //MARK: Properties
     @IBOutlet weak var imageView: UIImageView!

@@ -21,6 +21,8 @@
 		E5CF871224A118D500EB96AB /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF871124A118D500EB96AB /* HomeTVC.swift */; };
 		E5CF871424A1282B00EB96AB /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF871324A1282B00EB96AB /* CameraVC.swift */; };
 		E5CF871824A12C0C00EB96AB /* ImageViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF871724A12C0C00EB96AB /* ImageViewVC.swift */; };
+		E5D84D9424BE02F100DD7760 /* AboutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D84D9324BE02F100DD7760 /* AboutTVC.swift */; };
+		E5D84D9624BE03DE00DD7760 /* VIsionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D84D9524BE03DE00DD7760 /* VIsionCell.swift */; };
 		F288521CE1F3BF466C37B7BA /* Pods_Boundri_IOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1514E750205676EF25E81D /* Pods_Boundri_IOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		E5CF871124A118D500EB96AB /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
 		E5CF871324A1282B00EB96AB /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		E5CF871724A12C0C00EB96AB /* ImageViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewVC.swift; sourceTree = "<group>"; };
+		E5D84D9324BE02F100DD7760 /* AboutTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTVC.swift; sourceTree = "<group>"; };
+		E5D84D9524BE03DE00DD7760 /* VIsionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIsionCell.swift; sourceTree = "<group>"; };
 		E77E285F86034481B151F09C /* Pods-Boundri IOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Boundri IOSTests/Pods-Boundri IOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +141,17 @@
 			path = CloudVisionAPI;
 			sourceTree = "<group>";
 		};
+		E5C4390824B0E73200DA5FA9 /* DemoViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5CF871324A1282B00EB96AB /* CameraVC.swift */,
+				E5CF871724A12C0C00EB96AB /* ImageViewVC.swift */,
+				E5D84D9524BE03DE00DD7760 /* VIsionCell.swift */,
+			);
+			name = DemoViewControllers;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		E5CF869124A0205B00EB96AB = {
 			isa = PBXGroup;
 			children = (
@@ -177,11 +192,11 @@
 		E5CF86CF24A023F400EB96AB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5C4390824B0E73200DA5FA9 /* DemoViewControllers */,
 				E5CF871124A118D500EB96AB /* HomeTVC.swift */,
-				E5CF871324A1282B00EB96AB /* CameraVC.swift */,
-				E5CF871724A12C0C00EB96AB /* ImageViewVC.swift */,
 				C9A729BC24BB871200A2D549 /* ImageViewVCwithSiri.swift */,
 				E57D7D6024A8F95500C09A03 /* SettingsTVC.swift */,
+				E5D84D9324BE02F100DD7760 /* AboutTVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -462,12 +477,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A729BD24BB871200A2D549 /* ImageViewVCwithSiri.swift in Sources */,
+				E5D84D9424BE02F100DD7760 /* AboutTVC.swift in Sources */,
 				E5CF869E24A0205B00EB96AB /* AppDelegate.swift in Sources */,
 				E5CF871824A12C0C00EB96AB /* ImageViewVC.swift in Sources */,
 				E57D7D6124A8F95500C09A03 /* SettingsTVC.swift in Sources */,
 				E5CF871224A118D500EB96AB /* HomeTVC.swift in Sources */,
 				E529B9C724A3DBF6002A3E60 /* SiriKit.swift in Sources */,
 				E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */,
+				E5D84D9624BE03DE00DD7760 /* VIsionCell.swift in Sources */,
 				E529B9C524A3DBE0002A3E60 /* CloudVisionAPI.swift in Sources */,
 				E5CF871424A1282B00EB96AB /* CameraVC.swift in Sources */,
 			);

@@ -13,6 +13,11 @@ class CameraVC: UIViewController {
     
     //MARK: Properties
     @IBOutlet var cameraView: UIView!
+    @IBOutlet var optionsView: UICollectionView!
+    
+    // Vision Options
+    var visionOptions: [String] = ["text", "scene"]
+    var selectedOption: String = "text"
     
     let captureSession = AVCaptureSession()
     let settings = AVCapturePhotoSettings()
@@ -29,6 +34,7 @@ class CameraVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         checkForPhotoAccess()
     }
     
@@ -39,6 +45,7 @@ class CameraVC: UIViewController {
         if segue.identifier == "segueToImageView" {
             guard let view = segue.destination as? ImageViewVC else {return}
             view.imageToPresent = imageCaptured
+            view.visionOption = selectedOption
         }
     }
     
@@ -46,6 +53,33 @@ class CameraVC: UIViewController {
     @IBAction func cameraButtonDidTap(_ sender: Any) {
         let uniqueSettings = AVCapturePhotoSettings.init(from: settings)
         output?.capturePhoto(with: uniqueSettings, delegate: self)
+    }
+}
+
+
+extension CameraVC: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.visionOptions.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        // get a reference to our storyboard cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VisionCell", for: indexPath as IndexPath) as! VisionCell
+        
+        // Use the outlet in our custom class to get a reference to the UILabel in the cell
+        cell.visionLabel.text = self.visionOptions[indexPath.item]
+        cell.layer.cornerRadius = 8
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        selectedOption = visionOptions[indexPath.item]
+        let uniqueSettings = AVCapturePhotoSettings.init(from: settings)
+        output?.capturePhoto(with: uniqueSettings, delegate: self)
+        
     }
 }
 
