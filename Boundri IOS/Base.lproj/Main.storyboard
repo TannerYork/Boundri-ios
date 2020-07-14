@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ywB-vB-97y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1P-gU-T6G">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -236,7 +236,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-IM-pz5">
                                 <rect key="frame" x="20" y="128" width="374" height="734"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Boundri  hopes to utilize neural networks and deep learning to build an unobtrusive sensory enhancement system for the blind and visually impaired. The World Health Organization estimates that 285 million individuals experience blindness or visual impairment around the globe. Of that population, it is estimated that 2% to 8% of the population use white canes while 5% use guide-dogs. To us, this shows that there is a serious flaw in our modern mobility aids. The aim at first was to build a system to replace the white cane because of its many functional failures and increased insecurity (socially and physically).</mutableString>
+                                <string key="text">Boundri  hopes to utilize neural networks and deep learning to build an unobtrusive sensory enhancement system for the blind and visually impaired. The World Health Organization estimates that 285 million individuals experience blindness or visual impairment around the globe. Of that population, it is estimated that 2% to 8% of the population use white canes while 5% use guide-dogs. To us, this shows that there is a serious flaw in our modern mobility aids. The aim at first was to build a system to replace the white cane because of its many functional failures and increased insecurity (socially and physically).</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -524,7 +524,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoI-0D-qYh">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
@@ -592,6 +592,7 @@
                         <viewLayoutGuide key="safeArea" id="P4A-bs-hF3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Text Detection" id="t4F-Yj-2XK"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="cameraView" destination="KRV-nn-3bb" id="GXL-Y5-usW"/>
                         <outlet property="optionsView" destination="qFc-Ds-awm" id="mf5-v8-AgA"/>
@@ -609,11 +610,11 @@
             <objects>
                 <viewController id="UJJ-2d-PGb" customClass="ImageViewVC" customModule="Boundri_IOS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jJp-PI-9MU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No text was found" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZMi-ag-fzi">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="774"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -632,6 +633,7 @@
                         <viewLayoutGuide key="safeArea" id="Cwb-Tw-ZdH"/>
                     </view>
                     <navigationItem key="navigationItem" id="o6E-z2-BPa"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="imageText" destination="ZMi-ag-fzi" id="8k9-eu-A5G"/>
                     </connections>
