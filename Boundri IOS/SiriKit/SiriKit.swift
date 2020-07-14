@@ -11,6 +11,9 @@ import Foundation
 
 // user must be in app, siri will not be able to
 // recognize boundri commands outside of app
+// ex. "hey siri, what's in front of me?", siri won't be
+// able to identify that it needs to use boundri
+// to answer the question with such broad keywords
 
 // no way to change "Hey Siri" to "Hey Boundri"
 
@@ -31,11 +34,21 @@ import Foundation
 //      -> match keywords with api response
 //      -> use Siri to output response
 // JOURNEY 2
-// user asks "hey siri, take a picture"
+// user asks "hey siri, take a picture [and send it to boundri]"
+//      -> siri takes a picture (must automate, aka user should not
+//         have to press button to take a picture)
+//      -> siri sends photo to boundri
+//      -> boundri processes image
 // JOURNEY 3
-// user asks to siri "boundri, what's in front of me?"
+// user asks to siri "[ask] boundri what's in front of me?"
 //      -> listens for "boundri" keyword and opens app
 //      ISSUES: user still has to say "hey siri" to use it
+// JOURNEY 4
+// user says to siri "open boundri"
+//      -> opens app and siri responds
+//          - "Boundri is now open" and can ask
+//              - Would you like to see what's in front of you?
+//              - Would you like to to read some text?
 
 
 // get user question
