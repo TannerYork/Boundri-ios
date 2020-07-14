@@ -28,10 +28,11 @@ class ImageViewVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = imageToPresent
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        // imageView.image = imageToPresent
         
         //MARK: Google OCR
-        let image = self.imageView.image!
+        let image = imageToPresent!
         let visionImage = VisionImage(image: image)
         visionImage.orientation = image.imageOrientation
         

@@ -24,8 +24,7 @@ class SiriSettingsTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         laguageSelectors = [
-            americanEnglishSelection,
-            britishEnglishSelection
+            americanEnglishSelection
         ]
     }
     
