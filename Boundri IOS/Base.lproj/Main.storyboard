@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1P-gU-T6G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1P-gU-T6G">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -523,16 +523,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoI-0D-qYh">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoI-0D-qYh">
+                                <rect key="frame" x="20" y="44" width="374" height="407"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="407" id="qZH-Cs-nA9"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="cameraButtonDidTap:" destination="Mfi-0b-W4h" eventType="touchUpInside" id="PvM-me-ist"/>
+                                    <action selector="senceButtonDidTap:" destination="Mfi-0b-W4h" eventType="touchUpInside" id="tO8-uC-zj8"/>
                                 </connections>
                             </button>
-                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qFc-Ds-awm">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qFc-Ds-awm">
                                 <rect key="frame" x="0.0" y="754.5" width="414" height="107.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qFc-Ds-awm" secondAttribute="height" multiplier="374:97" id="9GI-Kd-CMg"/>
@@ -577,16 +580,28 @@
                                     <outlet property="delegate" destination="Mfi-0b-W4h" id="ahB-ac-EA1"/>
                                 </connections>
                             </collectionView>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMh-iV-qbV">
+                                <rect key="frame" x="20" y="459" width="374" height="407"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cameraButtonDidTap:" destination="Mfi-0b-W4h" eventType="touchUpInside" id="dc6-Bb-1tt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="qMh-iV-qbV" firstAttribute="top" secondItem="JoI-0D-qYh" secondAttribute="bottom" constant="8" id="92z-Y9-bsh"/>
                             <constraint firstItem="qFc-Ds-awm" firstAttribute="bottom" secondItem="P4A-bs-hF3" secondAttribute="bottom" id="9Me-dA-4jN"/>
-                            <constraint firstItem="JoI-0D-qYh" firstAttribute="top" secondItem="P4A-bs-hF3" secondAttribute="top" id="DZb-Ui-rgl"/>
-                            <constraint firstItem="JoI-0D-qYh" firstAttribute="bottom" secondItem="qFc-Ds-awm" secondAttribute="bottom" id="OLv-Tb-8pQ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qMh-iV-qbV" secondAttribute="bottom" constant="-4" id="GfF-Od-lHE"/>
+                            <constraint firstItem="JoI-0D-qYh" firstAttribute="centerX" secondItem="qFc-Ds-awm" secondAttribute="centerX" id="aqf-Ah-lli"/>
                             <constraint firstItem="qFc-Ds-awm" firstAttribute="trailing" secondItem="P4A-bs-hF3" secondAttribute="trailing" id="eFz-V9-xB6"/>
-                            <constraint firstItem="JoI-0D-qYh" firstAttribute="leading" secondItem="KRV-nn-3bb" secondAttribute="leadingMargin" id="hHJ-sz-MJ4"/>
-                            <constraint firstItem="JoI-0D-qYh" firstAttribute="centerX" secondItem="qFc-Ds-awm" secondAttribute="centerX" id="oiH-bI-ggT"/>
+                            <constraint firstItem="qMh-iV-qbV" firstAttribute="trailing" secondItem="JoI-0D-qYh" secondAttribute="trailing" id="fK7-5Z-BLX"/>
+                            <constraint firstItem="qMh-iV-qbV" firstAttribute="leading" secondItem="JoI-0D-qYh" secondAttribute="leading" id="gBC-cs-peQ"/>
+                            <constraint firstItem="JoI-0D-qYh" firstAttribute="leading" secondItem="KRV-nn-3bb" secondAttribute="leadingMargin" id="kYg-kq-0s7"/>
+                            <constraint firstItem="JoI-0D-qYh" firstAttribute="top" secondItem="P4A-bs-hF3" secondAttribute="top" id="qMW-8R-fjJ"/>
                             <constraint firstItem="qFc-Ds-awm" firstAttribute="leading" secondItem="P4A-bs-hF3" secondAttribute="leading" id="rvj-oJ-sfc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P4A-bs-hF3"/>
@@ -603,7 +618,7 @@
                 <exit id="Yh2-dR-dMp" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAu-gb-hul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3748" y="-800"/>
+            <point key="canvasLocation" x="3747.826086956522" y="-800.22321428571422"/>
         </scene>
         <!--Image ViewVC-->
         <scene sceneID="or4-DI-lkW">
@@ -613,7 +628,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No text was found" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZMi-ag-fzi">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZMi-ag-fzi">
                                 <rect key="frame" x="20" y="0.0" width="374" height="774"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>

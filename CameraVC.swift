@@ -52,11 +52,19 @@ class CameraVC: UIViewController {
     
     @IBAction func cameraButtonDidTap(_ sender: Any) {
         let uniqueSettings = AVCapturePhotoSettings.init(from: settings)
+        selectedOption = "text"
+        output?.capturePhoto(with: uniqueSettings, delegate: self)
+    }
+    
+    @IBAction func senceButtonDidTap(_ sender: Any) {
+        let uniqueSettings = AVCapturePhotoSettings.init(from: settings)
+        selectedOption = "scene"
         output?.capturePhoto(with: uniqueSettings, delegate: self)
     }
 }
 
 
+//MARK: Collection View
 extension CameraVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.visionOptions.count
@@ -83,7 +91,7 @@ extension CameraVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 }
 
-
+//MARK: Capture Delegate
 //Extinsion for setting up the camera view and its options
 extension CameraVC: AVCapturePhotoCaptureDelegate {
     func checkForPhotoAccess() {
