@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403AE45A209315A7439B23EE /* Pods_Boundri_Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4758BBBF1EF76752601F4CE1 /* Pods_Boundri_Intents.framework */; };
 		4482AE1D030C9C6106FA8F7C /* Pods_Boundri_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776B20CD4F48AC78218B84C1 /* Pods_Boundri_IOS.framework */; };
 		7D628CA360D1C3984EAFDB41 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55C3A37875B941A574C91D2 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework */; };
 		C9A729BD24BB871200A2D549 /* ImageViewVCwithSiri.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A729BC24BB871200A2D549 /* ImageViewVCwithSiri.swift */; };
+		E50FFAF424C77BA000E3567D /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50FFAF324C77BA000E3567D /* IntentHandler.swift */; };
+		E50FFAFC24C77BA000E3567D /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50FFAFB24C77BA000E3567D /* IntentsUI.framework */; };
+		E50FFAFF24C77BA000E3567D /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50FFAFE24C77BA000E3567D /* IntentViewController.swift */; };
+		E50FFB0224C77BA000E3567D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50FFB0024C77BA000E3567D /* MainInterface.storyboard */; };
+		E50FFB0624C77BA000E3567D /* Boundri-IntentsUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E50FFAFA24C77BA000E3567D /* Boundri-IntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E50FFB0924C77BA000E3567D /* Boundri-Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E50FFAF124C77BA000E3567D /* Boundri-Intents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E511B4DC24C7894500152B06 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E511B4DB24C7894500152B06 /* Intents.intentdefinition */; };
+		E511B4DE24C78A9A00152B06 /* ReadTextIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511B4DD24C78A9A00152B06 /* ReadTextIntentHandler.swift */; };
 		E529B9C524A3DBE0002A3E60 /* CloudVisionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529B9C424A3DBE0002A3E60 /* CloudVisionAPI.swift */; };
 		E529B9C724A3DBF6002A3E60 /* SiriKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529B9C624A3DBF6002A3E60 /* SiriKit.swift */; };
+		E5765B6924C802DB0066241B /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E511B4DB24C7894500152B06 /* Intents.intentdefinition */; };
 		E57D7D6124A8F95500C09A03 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D7D6024A8F95500C09A03 /* SettingsTVC.swift */; };
 		E5CF869E24A0205B00EB96AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869D24A0205B00EB96AB /* AppDelegate.swift */; };
 		E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */; };
@@ -27,6 +37,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E50FFB0424C77BA000E3567D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5CF869224A0205B00EB96AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E50FFAF924C77BA000E3567D;
+			remoteInfo = "Boundri-IntentsUI";
+		};
+		E50FFB0724C77BA000E3567D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5CF869224A0205B00EB96AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E50FFAF024C77BA000E3567D;
+			remoteInfo = "Boundri-Intents";
+		};
 		E5CF86B124A0206100EB96AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E5CF869224A0205B00EB96AB /* Project object */;
@@ -43,17 +67,45 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E50FFB0A24C77BA000E3567D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E50FFB0924C77BA000E3567D /* Boundri-Intents.appex in Embed App Extensions */,
+				E50FFB0624C77BA000E3567D /* Boundri-IntentsUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E1514E750205676EF25E81D /* Pods_Boundri_IOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boundri_IOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		456DBDA91F19AE11C0C89AB8 /* Pods-Boundri-Intents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri-Intents.debug.xcconfig"; path = "Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents.debug.xcconfig"; sourceTree = "<group>"; };
+		4758BBBF1EF76752601F4CE1 /* Pods_Boundri_Intents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boundri_Intents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65736443A7F6F82EE032D758 /* Pods-Boundri IOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOSTests.release.xcconfig"; path = "Target Support Files/Pods-Boundri IOSTests/Pods-Boundri IOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		776B20CD4F48AC78218B84C1 /* Pods_Boundri_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boundri_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB09EADB0989269D7CFB67F /* Pods-Boundri IOS-Boundri IOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS-Boundri IOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Boundri IOS-Boundri IOSUITests/Pods-Boundri IOS-Boundri IOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89F6330E3B9C8E4394B6D614 /* Pods-Boundri IOS-Boundri IOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS-Boundri IOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-Boundri IOS-Boundri IOSUITests/Pods-Boundri IOS-Boundri IOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		934B69409ADC93CED140632F /* Pods-Boundri-Intents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri-Intents.release.xcconfig"; path = "Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents.release.xcconfig"; sourceTree = "<group>"; };
 		A55C3A37875B941A574C91D2 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boundri_IOS_Boundri_IOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A729BC24BB871200A2D549 /* ImageViewVCwithSiri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewVCwithSiri.swift; sourceTree = "<group>"; };
 		C9C5B81824B4EA4800BCB3A6 /* Boundri IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Boundri IOS.entitlements"; sourceTree = "<group>"; };
 		CE10927030BE7AF0AA4020FF /* Pods-Boundri IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS.release.xcconfig"; path = "Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS.release.xcconfig"; sourceTree = "<group>"; };
 		D89D08DF759B46E28DBFCA93 /* Pods-Boundri IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS.debug.xcconfig"; path = "Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E50FFAF124C77BA000E3567D /* Boundri-Intents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Boundri-Intents.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50FFAF324C77BA000E3567D /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		E50FFAF524C77BA000E3567D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E50FFAFA24C77BA000E3567D /* Boundri-IntentsUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Boundri-IntentsUI.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50FFAFB24C77BA000E3567D /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		E50FFAFE24C77BA000E3567D /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		E50FFB0124C77BA000E3567D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E50FFB0324C77BA000E3567D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E511B4DB24C7894500152B06 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		E511B4DD24C78A9A00152B06 /* ReadTextIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadTextIntentHandler.swift; sourceTree = "<group>"; };
 		E529B9C424A3DBE0002A3E60 /* CloudVisionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVisionAPI.swift; sourceTree = "<group>"; };
 		E529B9C624A3DBF6002A3E60 /* SiriKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriKit.swift; sourceTree = "<group>"; };
 		E57D7D6024A8F95500C09A03 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
@@ -75,6 +127,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E50FFAEE24C77BA000E3567D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403AE45A209315A7439B23EE /* Pods_Boundri_Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E50FFAF724C77BA000E3567D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50FFAFC24C77BA000E3567D /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5CF869724A0205B00EB96AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,6 +176,8 @@
 				776B20CD4F48AC78218B84C1 /* Pods_Boundri_IOS.framework */,
 				A55C3A37875B941A574C91D2 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework */,
 				0E1514E750205676EF25E81D /* Pods_Boundri_IOSTests.framework */,
+				E50FFAFB24C77BA000E3567D /* IntentsUI.framework */,
+				4758BBBF1EF76752601F4CE1 /* Pods_Boundri_Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,24 +191,39 @@
 				7BB09EADB0989269D7CFB67F /* Pods-Boundri IOS-Boundri IOSUITests.release.xcconfig */,
 				E77E285F86034481B151F09C /* Pods-Boundri IOSTests.debug.xcconfig */,
 				65736443A7F6F82EE032D758 /* Pods-Boundri IOSTests.release.xcconfig */,
+				456DBDA91F19AE11C0C89AB8 /* Pods-Boundri-Intents.debug.xcconfig */,
+				934B69409ADC93CED140632F /* Pods-Boundri-Intents.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E529B9C224A3C810002A3E60 /* SiriKit */ = {
+		E50FFAF224C77BA000E3567D /* Boundri-Intents */ = {
 			isa = PBXGroup;
 			children = (
-				E529B9C624A3DBF6002A3E60 /* SiriKit.swift */,
+				E50FFAF324C77BA000E3567D /* IntentHandler.swift */,
+				E50FFAF524C77BA000E3567D /* Info.plist */,
+				E511B4DD24C78A9A00152B06 /* ReadTextIntentHandler.swift */,
 			);
-			path = SiriKit;
+			path = "Boundri-Intents";
 			sourceTree = "<group>";
 		};
-		E529B9C324A3C81A002A3E60 /* CloudVisionAPI */ = {
+		E50FFAFD24C77BA000E3567D /* Boundri-IntentsUI */ = {
+			isa = PBXGroup;
+			children = (
+				E50FFAFE24C77BA000E3567D /* IntentViewController.swift */,
+				E50FFB0024C77BA000E3567D /* MainInterface.storyboard */,
+				E50FFB0324C77BA000E3567D /* Info.plist */,
+			);
+			path = "Boundri-IntentsUI";
+			sourceTree = "<group>";
+		};
+		E5765B6D24C8D1FB0066241B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				E529B9C424A3DBE0002A3E60 /* CloudVisionAPI.swift */,
+				E529B9C624A3DBF6002A3E60 /* SiriKit.swift */,
 			);
-			path = CloudVisionAPI;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		E5C4390824B0E73200DA5FA9 /* DemoViewControllers */ = {
@@ -156,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				E5CF869C24A0205B00EB96AB /* Boundri IOS */,
+				E50FFAF224C77BA000E3567D /* Boundri-Intents */,
+				E50FFAFD24C77BA000E3567D /* Boundri-IntentsUI */,
 				E5CF869B24A0205B00EB96AB /* Products */,
 				023E58DE5EFFC49022775819 /* Pods */,
 				0174DE67D9C69D2316D2FEB7 /* Frameworks */,
@@ -168,6 +255,8 @@
 				E5CF869A24A0205B00EB96AB /* Boundri IOS.app */,
 				E5CF86B024A0206100EB96AB /* Boundri IOSTests.xctest */,
 				E5CF86BB24A0206100EB96AB /* Boundri IOSUITests.xctest */,
+				E50FFAF124C77BA000E3567D /* Boundri-Intents.appex */,
+				E50FFAFA24C77BA000E3567D /* Boundri-IntentsUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,11 +266,11 @@
 			children = (
 				C9C5B81824B4EA4800BCB3A6 /* Boundri IOS.entitlements */,
 				E5CF869D24A0205B00EB96AB /* AppDelegate.swift */,
-				E529B9C324A3C81A002A3E60 /* CloudVisionAPI */,
-				E529B9C224A3C810002A3E60 /* SiriKit */,
+				E5765B6D24C8D1FB0066241B /* Modules */,
 				E5CF86CF24A023F400EB96AB /* ViewControllers */,
 				E5CF86A624A0206100EB96AB /* Assets.xcassets */,
 				E5CF86AB24A0206100EB96AB /* Info.plist */,
+				E511B4DB24C7894500152B06 /* Intents.intentdefinition */,
 				E5CF86A824A0206100EB96AB /* LaunchScreen.storyboard */,
 				E5CF86A324A0205B00EB96AB /* Main.storyboard */,
 				E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */,
@@ -204,6 +293,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E50FFAF024C77BA000E3567D /* Boundri-Intents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E50FFB1024C77BA000E3567D /* Build configuration list for PBXNativeTarget "Boundri-Intents" */;
+			buildPhases = (
+				63DCB50C0CBE45D9BFEE1F0A /* [CP] Check Pods Manifest.lock */,
+				E50FFAED24C77BA000E3567D /* Sources */,
+				E50FFAEE24C77BA000E3567D /* Frameworks */,
+				E50FFAEF24C77BA000E3567D /* Resources */,
+				D4B9D0800C60E1C5C06F6348 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Boundri-Intents";
+			productName = "Boundri-Intents";
+			productReference = E50FFAF124C77BA000E3567D /* Boundri-Intents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E50FFAF924C77BA000E3567D /* Boundri-IntentsUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E50FFB0F24C77BA000E3567D /* Build configuration list for PBXNativeTarget "Boundri-IntentsUI" */;
+			buildPhases = (
+				E50FFAF624C77BA000E3567D /* Sources */,
+				E50FFAF724C77BA000E3567D /* Frameworks */,
+				E50FFAF824C77BA000E3567D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Boundri-IntentsUI";
+			productName = "Boundri-IntentsUI";
+			productReference = E50FFAFA24C77BA000E3567D /* Boundri-IntentsUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E5CF869924A0205B00EB96AB /* Boundri IOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5CF86C424A0206100EB96AB /* Build configuration list for PBXNativeTarget "Boundri IOS" */;
@@ -214,10 +339,13 @@
 				E5CF869824A0205B00EB96AB /* Resources */,
 				BB8369E8DE04283F3D20FA90 /* [CP] Embed Pods Frameworks */,
 				866A3721857625B3A60CF418 /* [CP] Copy Pods Resources */,
+				E50FFB0A24C77BA000E3567D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E50FFB0524C77BA000E3567D /* PBXTargetDependency */,
+				E50FFB0824C77BA000E3567D /* PBXTargetDependency */,
 			);
 			name = "Boundri IOS";
 			productName = "Boundri IOS";
@@ -270,10 +398,16 @@
 		E5CF869224A0205B00EB96AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Boundri;
 				TargetAttributes = {
+					E50FFAF024C77BA000E3567D = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					E50FFAF924C77BA000E3567D = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					E5CF869924A0205B00EB96AB = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -303,11 +437,28 @@
 				E5CF869924A0205B00EB96AB /* Boundri IOS */,
 				E5CF86AF24A0206100EB96AB /* Boundri IOSTests */,
 				E5CF86BA24A0206100EB96AB /* Boundri IOSUITests */,
+				E50FFAF024C77BA000E3567D /* Boundri-Intents */,
+				E50FFAF924C77BA000E3567D /* Boundri-IntentsUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E50FFAEF24C77BA000E3567D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E50FFAF824C77BA000E3567D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50FFB0224C77BA000E3567D /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5CF869824A0205B00EB96AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +502,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Boundri IOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63DCB50C0CBE45D9BFEE1F0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Boundri-Intents-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -447,6 +620,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D4B9D0800C60E1C5C06F6348 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D856D84B5FC24724735DE50D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +662,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E50FFAED24C77BA000E3567D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5765B6924C802DB0066241B /* Intents.intentdefinition in Sources */,
+				E50FFAF424C77BA000E3567D /* IntentHandler.swift in Sources */,
+				E511B4DE24C78A9A00152B06 /* ReadTextIntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E50FFAF624C77BA000E3567D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50FFAFF24C77BA000E3567D /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5CF869624A0205B00EB96AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,6 +690,7 @@
 				E5CF871824A12C0C00EB96AB /* ImageViewVC.swift in Sources */,
 				E57D7D6124A8F95500C09A03 /* SettingsTVC.swift in Sources */,
 				E5CF871224A118D500EB96AB /* HomeTVC.swift in Sources */,
+				E511B4DC24C7894500152B06 /* Intents.intentdefinition in Sources */,
 				E529B9C724A3DBF6002A3E60 /* SiriKit.swift in Sources */,
 				E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */,
 				E5D84D9624BE03DE00DD7760 /* VIsionCell.swift in Sources */,
@@ -507,6 +716,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E50FFB0524C77BA000E3567D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E50FFAF924C77BA000E3567D /* Boundri-IntentsUI */;
+			targetProxy = E50FFB0424C77BA000E3567D /* PBXContainerItemProxy */;
+		};
+		E50FFB0824C77BA000E3567D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E50FFAF024C77BA000E3567D /* Boundri-Intents */;
+			targetProxy = E50FFB0724C77BA000E3567D /* PBXContainerItemProxy */;
+		};
 		E5CF86B224A0206100EB96AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E5CF869924A0205B00EB96AB /* Boundri IOS */;
@@ -520,6 +739,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E50FFB0024C77BA000E3567D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E50FFB0124C77BA000E3567D /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		E5CF86A324A0205B00EB96AB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -539,6 +766,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E50FFB0B24C77BA000E3567D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 456DBDA91F19AE11C0C89AB8 /* Pods-Boundri-Intents.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S29AA6XM46;
+				INFOPLIST_FILE = "Boundri-Intents/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "boundri-app.Boundri-Intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E50FFB0C24C77BA000E3567D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 934B69409ADC93CED140632F /* Pods-Boundri-Intents.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S29AA6XM46;
+				INFOPLIST_FILE = "Boundri-Intents/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "boundri-app.Boundri-Intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E50FFB0D24C77BA000E3567D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S29AA6XM46;
+				INFOPLIST_FILE = "Boundri-IntentsUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "boundri-app.Boundri-IntentsUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E50FFB0E24C77BA000E3567D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S29AA6XM46;
+				INFOPLIST_FILE = "Boundri-IntentsUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "boundri-app.Boundri-IntentsUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E5CF86C224A0206100EB96AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -589,6 +898,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INTENTS_CODEGEN_LANGUAGE = Swift;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -643,6 +953,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INTENTS_CODEGEN_LANGUAGE = Swift;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -657,6 +968,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D89D08DF759B46E28DBFCA93 /* Pods-Boundri IOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Boundri IOS/Boundri IOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -678,6 +990,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE10927030BE7AF0AA4020FF /* Pods-Boundri IOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Boundri IOS/Boundri IOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -786,6 +1099,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E50FFB0F24C77BA000E3567D /* Build configuration list for PBXNativeTarget "Boundri-IntentsUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E50FFB0D24C77BA000E3567D /* Debug */,
+				E50FFB0E24C77BA000E3567D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E50FFB1024C77BA000E3567D /* Build configuration list for PBXNativeTarget "Boundri-Intents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E50FFB0B24C77BA000E3567D /* Debug */,
+				E50FFB0C24C77BA000E3567D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E5CF869524A0205B00EB96AB /* Build configuration list for PBXProject "Boundri IOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

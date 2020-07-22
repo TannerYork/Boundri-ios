@@ -17,5 +17,13 @@ target 'Boundri IOS' do
   target 'Boundri IOSUITests' do
     # Pods for testing
   end
+end
+
+target 'Boundri-Intents' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Boundri-Intents
+  pod 'GoogleMLKit/TextRecognition'
 
 end

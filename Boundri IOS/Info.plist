@@ -24,6 +24,10 @@
 	<string>This app requires the use of your camera to play</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Microphone use is not required but could be used to your advantage.</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>ReadTextIntent</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
