@@ -8,82 +8,41 @@
 
 import Foundation
 
-func ocrScript(json: String) {
-    print(json)
-    struct Responses: Codable {
-        var responses: [Annotations]
-    }
-    struct Annotations: Codable {
-        var textAnnotations: [Text]
-    }
-    struct Text: Codable {
-        var description:String
-    }
-    let jsonData = json.data(using: .utf8)!
-    let text = try! JSONDecoder().decode(Responses.self, from: jsonData)
-    print(text)
-}
+import UIKit
 
-func imageEvaluate(evaluation: String, image: String) {
-    // PREPARE URL
-    let url = URL(string: "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCfFj3M9gB89AyiwOh7evIb_xbtj6pc5_A")
+func requestOcr(imgAddress: String) -> String {
+    // Prepare URL
+    let url = URL(string: "http://localhost:3000/api/ocr")
     guard let requestUrl = url else { fatalError() }
-    
-    // PREPARE URL REQUEST OBJECT
+    // Prepare URL Request Object
     var request = URLRequest(url: requestUrl)
     request.httpMethod = "POST"
-    request.allHTTPHeaderFields = [
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-    ]
-    
-    // PREPARE REQUEST BODY
-    let jsonRequest = [
-      "requests":[
-        [
-          "image":[
-            "source":[
-              "imageUri":
-                image
-            ]
-          ],
-          "features":[
-            [
-              "type":evaluation,
-              "maxResults":1
-            ]
-          ]
-        ]
-      ]
-    ] as [String : Any]
-    let encodedRequest = try! JSONSerialization.data(withJSONObject: jsonRequest, options: .prettyPrinted)
-    request.httpBody = encodedRequest;
-
-    
-    // EXECUTE REQUEST
+     
+    // HTTP Request Parameters which will be sent in HTTP Request Body
+    let postString = "image=" + imgAddress;
+    // Set HTTP Request Body
+    request.httpBody = postString.data(using: String.Encoding.utf8);
+    // Perform HTTP Request
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            // CHECK FOR ERRORS
+            // Check for Error
             if let error = error {
                 print("Error took place \(error)")
                 return
             }
      
-            // CONVERT HTTP REQUEST INTO STRING
+            // Convert HTTP Response Data to a String
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
-//                print("Response data string:\n \(dataString)")
-                ocrScript(json: dataString)
+                print("Response data string:\n \(dataString)")
+                
             }
+            
     }
     task.resume()
+    return apiResponse
 }
 
-//imageEvaluate(
-//    evaluation: "TEXT_DETECTION",
-//    image:"https://www.yeschinesefood.com/images/menu1.jpg"
-//)
+let response = requestOcr(imgAddress: "https://jeroen.github.io/images/testocr.png");
 
+print(response)
 
-
-
- 
