@@ -13,9 +13,14 @@ import MLKit
 
 class ReadTextIntentHandler: NSObject, ReadTextIntentHandling {
 
+    func confirm(intent: ReadTextIntent, completion: @escaping (ReadTextIntentResponse) -> Void) {
+        completion(ReadTextIntentResponse(code: .ready, userActivity: nil))
+    }
+    
     func handle(intent: ReadTextIntent, completion: @escaping (ReadTextIntentResponse) -> Void) {
         let text = analyzeImage()
-        completion(ReadTextIntentResponse.success(textResponse: text))
+//        completion(ReadTextIntentResponse.success(textResponse: text))
+        completion(.success(textResponse: "I work"))
     }
 
 

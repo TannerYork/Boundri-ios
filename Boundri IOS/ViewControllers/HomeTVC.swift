@@ -8,11 +8,16 @@
 
 import Foundation
 import UIKit
+import Intents
 
 class HomeTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("I'm passing through HomeTVC")
+//        AppIntent.allowSiri()
+//        AppIntent.readText()
+        INInteraction(intent: ReadTextIntent(), response: nil).donate(completion: nil)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
