@@ -15,7 +15,8 @@ class ReadTextIntentHandler: NSObject, ReadTextIntentHandling {
     }
     
     func handle(intent: ReadTextIntent, completion: @escaping (ReadTextIntentResponse) -> Void) {
-        AppIntent().readTextHandler { (response) in
+//        AppIntent().readTextHandler { (response) in
+        AppIntent().readTextFromSampleImageHandler { (response) in
             completion(.success(textResponse: response))
         }
     }
