@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		403AE45A209315A7439B23EE /* Pods_Boundri_Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4758BBBF1EF76752601F4CE1 /* Pods_Boundri_Intents.framework */; };
 		4482AE1D030C9C6106FA8F7C /* Pods_Boundri_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776B20CD4F48AC78218B84C1 /* Pods_Boundri_IOS.framework */; };
+		6184346D24D2EE2000BC3700 /* Microservices-Boundri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6184346C24D2EE2000BC3700 /* Microservices-Boundri.framework */; };
 		7D628CA360D1C3984EAFDB41 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55C3A37875B941A574C91D2 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework */; };
 		C9A729BD24BB871200A2D549 /* ImageViewVCwithSiri.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A729BC24BB871200A2D549 /* ImageViewVCwithSiri.swift */; };
 		E50FFAF424C77BA000E3567D /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50FFAF324C77BA000E3567D /* IntentHandler.swift */; };
@@ -86,6 +87,7 @@
 		0E1514E750205676EF25E81D /* Pods_Boundri_IOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boundri_IOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		456DBDA91F19AE11C0C89AB8 /* Pods-Boundri-Intents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri-Intents.debug.xcconfig"; path = "Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents.debug.xcconfig"; sourceTree = "<group>"; };
 		4758BBBF1EF76752601F4CE1 /* Pods_Boundri_Intents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boundri_Intents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6184346C24D2EE2000BC3700 /* Microservices-Boundri.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Microservices-Boundri.framework"; path = "../../../Desktop/Microservices-Boundri.framework"; sourceTree = "<group>"; };
 		65736443A7F6F82EE032D758 /* Pods-Boundri IOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOSTests.release.xcconfig"; path = "Target Support Files/Pods-Boundri IOSTests/Pods-Boundri IOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		776B20CD4F48AC78218B84C1 /* Pods_Boundri_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boundri_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB09EADB0989269D7CFB67F /* Pods-Boundri IOS-Boundri IOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS-Boundri IOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Boundri IOS-Boundri IOSUITests/Pods-Boundri IOS-Boundri IOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4482AE1D030C9C6106FA8F7C /* Pods_Boundri_IOS.framework in Frameworks */,
+				6184346D24D2EE2000BC3700 /* Microservices-Boundri.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +176,7 @@
 		0174DE67D9C69D2316D2FEB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6184346C24D2EE2000BC3700 /* Microservices-Boundri.framework */,
 				776B20CD4F48AC78218B84C1 /* Pods_Boundri_IOS.framework */,
 				A55C3A37875B941A574C91D2 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework */,
 				0E1514E750205676EF25E81D /* Pods_Boundri_IOSTests.framework */,
