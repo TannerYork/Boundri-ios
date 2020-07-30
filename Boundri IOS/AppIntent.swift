@@ -45,9 +45,6 @@ class AppIntent {
 //                return handler(result.text)
 //            }
 //        }
-        ocr { (res) in
-            handler(res)
-        }
     }
     
     func readTextHandler(handler: @escaping (String) -> Void) {

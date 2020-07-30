@@ -7,38 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403AE45A209315A7439B23EE /* Pods_Boundri_Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4758BBBF1EF76752601F4CE1 /* Pods_Boundri_Intents.framework */; };
 		4482AE1D030C9C6106FA8F7C /* Pods_Boundri_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776B20CD4F48AC78218B84C1 /* Pods_Boundri_IOS.framework */; };
 		7D628CA360D1C3984EAFDB41 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55C3A37875B941A574C91D2 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework */; };
-		C94442C724D311C500C4497D /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE727D24D2409A00ECED5D /* AppIntent.swift */; };
-		C94442C924D311F200C4497D /* MLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94442C824D311F200C4497D /* MLKit.swift */; };
-		C9A729BD24BB871200A2D549 /* ImageViewVCwithSiri.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A729BC24BB871200A2D549 /* ImageViewVCwithSiri.swift */; };
-		C9EE727E24D2409A00ECED5D /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE727D24D2409A00ECED5D /* AppIntent.swift */; };
-		C9EE728224D26E0700ECED5D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C9EE728124D26E0700ECED5D /* Intents.intentdefinition */; };
-		C9EE728A24D2701800ECED5D /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EE728924D2701800ECED5D /* IntentHandler.swift */; };
-		C9EE728E24D2701800ECED5D /* Boundri-Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C9EE728724D2701800ECED5D /* Boundri-Intents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		C9EE729224D2709800ECED5D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C9EE728124D26E0700ECED5D /* Intents.intentdefinition */; };
-		E529B9C524A3DBE0002A3E60 /* CloudVisionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529B9C424A3DBE0002A3E60 /* CloudVisionAPI.swift */; };
+		E50FFAF424C77BA000E3567D /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50FFAF324C77BA000E3567D /* IntentHandler.swift */; };
+		E50FFAFC24C77BA000E3567D /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50FFAFB24C77BA000E3567D /* IntentsUI.framework */; };
+		E50FFAFF24C77BA000E3567D /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50FFAFE24C77BA000E3567D /* IntentViewController.swift */; };
+		E50FFB0224C77BA000E3567D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50FFB0024C77BA000E3567D /* MainInterface.storyboard */; };
+		E50FFB0624C77BA000E3567D /* Boundri-IntentsUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E50FFAFA24C77BA000E3567D /* Boundri-IntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E50FFB0924C77BA000E3567D /* Boundri-Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E50FFAF124C77BA000E3567D /* Boundri-Intents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E511B4DC24C7894500152B06 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E511B4DB24C7894500152B06 /* Intents.intentdefinition */; };
+		E512A40F24D0879D006687FA /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A40E24D0879D006687FA /* LoadingVC.swift */; };
+		E512A41424D0A6E5006687FA /* VisionOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41324D0A6E5006687FA /* VisionOptionCell.swift */; };
+		E512A41624D0C02F006687FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41524D0C02E006687FA /* LoginVC.swift */; };
+		E512A41A24D0C8B7006687FA /* VisionCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41924D0C8B7006687FA /* VisionCameraVC.swift */; };
+		E512A41C24D0CFFC006687FA /* VisionOutputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41B24D0CFFC006687FA /* VisionOutputVC.swift */; };
+		E512A41E24D0E1EE006687FA /* CustomNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41D24D0E1EE006687FA /* CustomNC.swift */; };
+		E529B9C524A3DBE0002A3E60 /* VisionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529B9C424A3DBE0002A3E60 /* VisionAPI.swift */; };
 		E529B9C724A3DBF6002A3E60 /* SiriKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529B9C624A3DBF6002A3E60 /* SiriKit.swift */; };
-		E57D7D6124A8F95500C09A03 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D7D6024A8F95500C09A03 /* SettingsTVC.swift */; };
+		E565649324D1DCFF006C8CFB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E565649224D1DCFF006C8CFB /* HomeVC.swift */; };
+		E565649524D3280B006C8CFB /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E565649424D3280B006C8CFB /* AppIntent.swift */; };
+		E565649624D32828006C8CFB /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E565649424D3280B006C8CFB /* AppIntent.swift */; };
+		E565649724D329AF006C8CFB /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E565649424D3280B006C8CFB /* AppIntent.swift */; };
+		E5765B6924C802DB0066241B /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E511B4DB24C7894500152B06 /* Intents.intentdefinition */; };
 		E5CF869E24A0205B00EB96AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869D24A0205B00EB96AB /* AppDelegate.swift */; };
 		E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */; };
 		E5CF86A524A0205B00EB96AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CF86A324A0205B00EB96AB /* Main.storyboard */; };
 		E5CF86A724A0206100EB96AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CF86A624A0206100EB96AB /* Assets.xcassets */; };
 		E5CF86AA24A0206100EB96AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CF86A824A0206100EB96AB /* LaunchScreen.storyboard */; };
-		E5CF871224A118D500EB96AB /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF871124A118D500EB96AB /* HomeTVC.swift */; };
 		E5CF871424A1282B00EB96AB /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF871324A1282B00EB96AB /* CameraVC.swift */; };
 		E5CF871824A12C0C00EB96AB /* ImageViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF871724A12C0C00EB96AB /* ImageViewVC.swift */; };
-		E5D84D9424BE02F100DD7760 /* AboutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D84D9324BE02F100DD7760 /* AboutTVC.swift */; };
 		E5D84D9624BE03DE00DD7760 /* VIsionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D84D9524BE03DE00DD7760 /* VIsionCell.swift */; };
 		F288521CE1F3BF466C37B7BA /* Pods_Boundri_IOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1514E750205676EF25E81D /* Pods_Boundri_IOSTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C9EE728C24D2701800ECED5D /* PBXContainerItemProxy */ = {
+		E50FFB0424C77BA000E3567D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E5CF869224A0205B00EB96AB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C9EE728624D2701800ECED5D;
+			remoteGlobalIDString = E50FFAF924C77BA000E3567D;
+			remoteInfo = "Boundri-IntentsUI";
+		};
+		E50FFB0724C77BA000E3567D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5CF869224A0205B00EB96AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E50FFAF024C77BA000E3567D;
 			remoteInfo = "Boundri-Intents";
 		};
 		E5CF86B124A0206100EB96AB /* PBXContainerItemProxy */ = {
@@ -64,7 +79,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				C9EE728E24D2701800ECED5D /* Boundri-Intents.appex in Embed App Extensions */,
+				E50FFB0924C77BA000E3567D /* Boundri-Intents.appex in Embed App Extensions */,
+				E50FFB0624C77BA000E3567D /* Boundri-IntentsUI.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,20 +97,28 @@
 		89F6330E3B9C8E4394B6D614 /* Pods-Boundri IOS-Boundri IOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS-Boundri IOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-Boundri IOS-Boundri IOSUITests/Pods-Boundri IOS-Boundri IOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		934B69409ADC93CED140632F /* Pods-Boundri-Intents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri-Intents.release.xcconfig"; path = "Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents.release.xcconfig"; sourceTree = "<group>"; };
 		A55C3A37875B941A574C91D2 /* Pods_Boundri_IOS_Boundri_IOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boundri_IOS_Boundri_IOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C94442C824D311F200C4497D /* MLKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLKit.swift; sourceTree = "<group>"; };
-		C9A729BC24BB871200A2D549 /* ImageViewVCwithSiri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewVCwithSiri.swift; sourceTree = "<group>"; };
 		C9C5B81824B4EA4800BCB3A6 /* Boundri IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Boundri IOS.entitlements"; sourceTree = "<group>"; };
-		C9EE727D24D2409A00ECED5D /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
-		C9EE728124D26E0700ECED5D /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
-		C9EE728724D2701800ECED5D /* Boundri-Intents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Boundri-Intents.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9EE728924D2701800ECED5D /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		C9EE728B24D2701800ECED5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE10927030BE7AF0AA4020FF /* Pods-Boundri IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS.release.xcconfig"; path = "Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS.release.xcconfig"; sourceTree = "<group>"; };
 		D89D08DF759B46E28DBFCA93 /* Pods-Boundri IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS.debug.xcconfig"; path = "Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E50FFAF124C77BA000E3567D /* Boundri-Intents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Boundri-Intents.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50FFAF324C77BA000E3567D /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		E50FFAF524C77BA000E3567D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E50FFAFA24C77BA000E3567D /* Boundri-IntentsUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Boundri-IntentsUI.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50FFAFB24C77BA000E3567D /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		E529B9C424A3DBE0002A3E60 /* CloudVisionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVisionAPI.swift; sourceTree = "<group>"; };
+		E50FFAFE24C77BA000E3567D /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		E50FFB0124C77BA000E3567D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E50FFB0324C77BA000E3567D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E511B4DB24C7894500152B06 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		E512A40E24D0879D006687FA /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		E512A41324D0A6E5006687FA /* VisionOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOptionCell.swift; sourceTree = "<group>"; };
+		E512A41524D0C02E006687FA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		E512A41924D0C8B7006687FA /* VisionCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionCameraVC.swift; sourceTree = "<group>"; };
+		E512A41B24D0CFFC006687FA /* VisionOutputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOutputVC.swift; sourceTree = "<group>"; };
+		E512A41D24D0E1EE006687FA /* CustomNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNC.swift; sourceTree = "<group>"; };
+		E529B9C424A3DBE0002A3E60 /* VisionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAPI.swift; sourceTree = "<group>"; };
 		E529B9C624A3DBF6002A3E60 /* SiriKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriKit.swift; sourceTree = "<group>"; };
-		E57D7D6024A8F95500C09A03 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
+		E565649224D1DCFF006C8CFB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		E565649424D3280B006C8CFB /* AppIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		E5CF869A24A0205B00EB96AB /* Boundri IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boundri IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CF869D24A0205B00EB96AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,19 +128,26 @@
 		E5CF86AB24A0206100EB96AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5CF86B024A0206100EB96AB /* Boundri IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boundri IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CF86BB24A0206100EB96AB /* Boundri IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boundri IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5CF871124A118D500EB96AB /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
-		E5CF871324A1282B00EB96AB /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
-		E5CF871724A12C0C00EB96AB /* ImageViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewVC.swift; sourceTree = "<group>"; };
-		E5D84D9324BE02F100DD7760 /* AboutTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTVC.swift; sourceTree = "<group>"; };
-		E5D84D9524BE03DE00DD7760 /* VIsionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIsionCell.swift; sourceTree = "<group>"; };
+		E5CF871324A1282B00EB96AB /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraVC.swift; path = "Boundri IOS/ViewControllers/DemoViewControllers/CameraVC.swift"; sourceTree = "<group>"; };
+		E5CF871724A12C0C00EB96AB /* ImageViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageViewVC.swift; path = "Boundri IOS/ViewControllers/DemoViewControllers/ImageViewVC.swift"; sourceTree = "<group>"; };
+		E5D84D9524BE03DE00DD7760 /* VIsionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VIsionCell.swift; path = "Boundri IOS/ViewControllers/DemoViewControllers/VIsionCell.swift"; sourceTree = "<group>"; };
 		E77E285F86034481B151F09C /* Pods-Boundri IOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Boundri IOSTests/Pods-Boundri IOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C9EE728424D2701800ECED5D /* Frameworks */ = {
+		E50FFAEE24C77BA000E3567D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403AE45A209315A7439B23EE /* Pods_Boundri_Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E50FFAF724C77BA000E3567D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50FFAFC24C77BA000E3567D /* IntentsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,19 +205,37 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C9EE728824D2701800ECED5D /* Boundri-Intents */ = {
+		E50FFAF224C77BA000E3567D /* Boundri-Intents */ = {
 			isa = PBXGroup;
 			children = (
-				C9EE728924D2701800ECED5D /* IntentHandler.swift */,
-				C9EE728B24D2701800ECED5D /* Info.plist */,
+				E50FFAF324C77BA000E3567D /* IntentHandler.swift */,
+				E50FFAF524C77BA000E3567D /* Info.plist */,
 			);
 			path = "Boundri-Intents";
+			sourceTree = "<group>";
+		};
+		E50FFAFD24C77BA000E3567D /* Boundri-IntentsUI */ = {
+			isa = PBXGroup;
+			children = (
+				E50FFAFE24C77BA000E3567D /* IntentViewController.swift */,
+				E50FFB0024C77BA000E3567D /* MainInterface.storyboard */,
+				E50FFB0324C77BA000E3567D /* Info.plist */,
+			);
+			path = "Boundri-IntentsUI";
+			sourceTree = "<group>";
+		};
+		E512A41224D0A6A1006687FA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E512A41324D0A6E5006687FA /* VisionOptionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E5765B6D24C8D1FB0066241B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E529B9C424A3DBE0002A3E60 /* CloudVisionAPI.swift */,
+				E529B9C424A3DBE0002A3E60 /* VisionAPI.swift */,
 				E529B9C624A3DBF6002A3E60 /* SiriKit.swift */,
 			);
 			path = Modules;
@@ -207,7 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				E5CF869C24A0205B00EB96AB /* Boundri IOS */,
-				C9EE728824D2701800ECED5D /* Boundri-Intents */,
+				E50FFAF224C77BA000E3567D /* Boundri-Intents */,
+				E50FFAFD24C77BA000E3567D /* Boundri-IntentsUI */,
 				E5CF869B24A0205B00EB96AB /* Products */,
 				023E58DE5EFFC49022775819 /* Pods */,
 				0174DE67D9C69D2316D2FEB7 /* Frameworks */,
@@ -220,7 +270,8 @@
 				E5CF869A24A0205B00EB96AB /* Boundri IOS.app */,
 				E5CF86B024A0206100EB96AB /* Boundri IOSTests.xctest */,
 				E5CF86BB24A0206100EB96AB /* Boundri IOSUITests.xctest */,
-				C9EE728724D2701800ECED5D /* Boundri-Intents.appex */,
+				E50FFAF124C77BA000E3567D /* Boundri-Intents.appex */,
+				E50FFAFA24C77BA000E3567D /* Boundri-IntentsUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,17 +280,17 @@
 			isa = PBXGroup;
 			children = (
 				C9C5B81824B4EA4800BCB3A6 /* Boundri IOS.entitlements */,
+				E565649424D3280B006C8CFB /* AppIntent.swift */,
 				E5CF869D24A0205B00EB96AB /* AppDelegate.swift */,
-				C9EE727D24D2409A00ECED5D /* AppIntent.swift */,
-				C94442C824D311F200C4497D /* MLKit.swift */,
+				E512A41224D0A6A1006687FA /* Cells */,
 				E5765B6D24C8D1FB0066241B /* Modules */,
 				E5CF86CF24A023F400EB96AB /* ViewControllers */,
 				E5CF86A624A0206100EB96AB /* Assets.xcassets */,
 				E5CF86AB24A0206100EB96AB /* Info.plist */,
+				E511B4DB24C7894500152B06 /* Intents.intentdefinition */,
 				E5CF86A824A0206100EB96AB /* LaunchScreen.storyboard */,
 				E5CF86A324A0205B00EB96AB /* Main.storyboard */,
 				E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */,
-				C9EE728124D26E0700ECED5D /* Intents.intentdefinition */,
 			);
 			path = "Boundri IOS";
 			sourceTree = "<group>";
@@ -248,10 +299,12 @@
 			isa = PBXGroup;
 			children = (
 				E5C4390824B0E73200DA5FA9 /* DemoViewControllers */,
-				E5CF871124A118D500EB96AB /* HomeTVC.swift */,
-				C9A729BC24BB871200A2D549 /* ImageViewVCwithSiri.swift */,
-				E57D7D6024A8F95500C09A03 /* SettingsTVC.swift */,
-				E5D84D9324BE02F100DD7760 /* AboutTVC.swift */,
+				E512A40E24D0879D006687FA /* LoadingVC.swift */,
+				E512A41524D0C02E006687FA /* LoginVC.swift */,
+				E565649224D1DCFF006C8CFB /* HomeVC.swift */,
+				E512A41924D0C8B7006687FA /* VisionCameraVC.swift */,
+				E512A41B24D0CFFC006687FA /* VisionOutputVC.swift */,
+				E512A41D24D0E1EE006687FA /* CustomNC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -259,13 +312,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C9EE728624D2701800ECED5D /* Boundri-Intents */ = {
+		E50FFAF024C77BA000E3567D /* Boundri-Intents */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9EE728F24D2701800ECED5D /* Build configuration list for PBXNativeTarget "Boundri-Intents" */;
+			buildConfigurationList = E50FFB1024C77BA000E3567D /* Build configuration list for PBXNativeTarget "Boundri-Intents" */;
 			buildPhases = (
-				C9EE728324D2701800ECED5D /* Sources */,
-				C9EE728424D2701800ECED5D /* Frameworks */,
-				C9EE728524D2701800ECED5D /* Resources */,
+				63DCB50C0CBE45D9BFEE1F0A /* [CP] Check Pods Manifest.lock */,
+				E50FFAED24C77BA000E3567D /* Sources */,
+				E50FFAEE24C77BA000E3567D /* Frameworks */,
+				E50FFAEF24C77BA000E3567D /* Resources */,
+				D4B9D0800C60E1C5C06F6348 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,7 +328,24 @@
 			);
 			name = "Boundri-Intents";
 			productName = "Boundri-Intents";
-			productReference = C9EE728724D2701800ECED5D /* Boundri-Intents.appex */;
+			productReference = E50FFAF124C77BA000E3567D /* Boundri-Intents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E50FFAF924C77BA000E3567D /* Boundri-IntentsUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E50FFB0F24C77BA000E3567D /* Build configuration list for PBXNativeTarget "Boundri-IntentsUI" */;
+			buildPhases = (
+				E50FFAF624C77BA000E3567D /* Sources */,
+				E50FFAF724C77BA000E3567D /* Frameworks */,
+				E50FFAF824C77BA000E3567D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Boundri-IntentsUI";
+			productName = "Boundri-IntentsUI";
+			productReference = E50FFAFA24C77BA000E3567D /* Boundri-IntentsUI.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		E5CF869924A0205B00EB96AB /* Boundri IOS */ = {
@@ -291,7 +363,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				C9EE728D24D2701800ECED5D /* PBXTargetDependency */,
+				E50FFB0524C77BA000E3567D /* PBXTargetDependency */,
+				E50FFB0824C77BA000E3567D /* PBXTargetDependency */,
 			);
 			name = "Boundri IOS";
 			productName = "Boundri IOS";
@@ -344,12 +417,15 @@
 		E5CF869224A0205B00EB96AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Boundri;
 				TargetAttributes = {
-					C9EE728624D2701800ECED5D = {
-						CreatedOnToolsVersion = 11.3.1;
+					E50FFAF024C77BA000E3567D = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					E50FFAF924C77BA000E3567D = {
+						CreatedOnToolsVersion = 11.6;
 					};
 					E5CF869924A0205B00EB96AB = {
 						CreatedOnToolsVersion = 11.5;
@@ -380,16 +456,25 @@
 				E5CF869924A0205B00EB96AB /* Boundri IOS */,
 				E5CF86AF24A0206100EB96AB /* Boundri IOSTests */,
 				E5CF86BA24A0206100EB96AB /* Boundri IOSUITests */,
-				C9EE728624D2701800ECED5D /* Boundri-Intents */,
+				E50FFAF024C77BA000E3567D /* Boundri-Intents */,
+				E50FFAF924C77BA000E3567D /* Boundri-IntentsUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C9EE728524D2701800ECED5D /* Resources */ = {
+		E50FFAEF24C77BA000E3567D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E50FFAF824C77BA000E3567D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50FFB0224C77BA000E3567D /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +521,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Boundri IOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63DCB50C0CBE45D9BFEE1F0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Boundri-Intents-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -532,6 +639,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D4B9D0800C60E1C5C06F6348 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D856D84B5FC24724735DE50D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -557,13 +681,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C9EE728324D2701800ECED5D /* Sources */ = {
+		E50FFAED24C77BA000E3567D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9EE729224D2709800ECED5D /* Intents.intentdefinition in Sources */,
-				C9EE728A24D2701800ECED5D /* IntentHandler.swift in Sources */,
-				C94442C724D311C500C4497D /* AppIntent.swift in Sources */,
+				E5765B6924C802DB0066241B /* Intents.intentdefinition in Sources */,
+				E50FFAF424C77BA000E3567D /* IntentHandler.swift in Sources */,
+				E565649724D329AF006C8CFB /* AppIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E50FFAF624C77BA000E3567D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E50FFAFF24C77BA000E3567D /* IntentViewController.swift in Sources */,
+				E565649624D32828006C8CFB /* AppIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,19 +704,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9A729BD24BB871200A2D549 /* ImageViewVCwithSiri.swift in Sources */,
-				E5D84D9424BE02F100DD7760 /* AboutTVC.swift in Sources */,
+				E512A41A24D0C8B7006687FA /* VisionCameraVC.swift in Sources */,
+				E565649324D1DCFF006C8CFB /* HomeVC.swift in Sources */,
+				E512A41424D0A6E5006687FA /* VisionOptionCell.swift in Sources */,
+				E512A41624D0C02F006687FA /* LoginVC.swift in Sources */,
 				E5CF869E24A0205B00EB96AB /* AppDelegate.swift in Sources */,
 				E5CF871824A12C0C00EB96AB /* ImageViewVC.swift in Sources */,
-				E57D7D6124A8F95500C09A03 /* SettingsTVC.swift in Sources */,
-				E5CF871224A118D500EB96AB /* HomeTVC.swift in Sources */,
+				E512A41E24D0E1EE006687FA /* CustomNC.swift in Sources */,
+				E511B4DC24C7894500152B06 /* Intents.intentdefinition in Sources */,
 				E529B9C724A3DBF6002A3E60 /* SiriKit.swift in Sources */,
-				C9EE727E24D2409A00ECED5D /* AppIntent.swift in Sources */,
 				E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */,
+				E512A41C24D0CFFC006687FA /* VisionOutputVC.swift in Sources */,
 				E5D84D9624BE03DE00DD7760 /* VIsionCell.swift in Sources */,
-				E529B9C524A3DBE0002A3E60 /* CloudVisionAPI.swift in Sources */,
-				C94442C924D311F200C4497D /* MLKit.swift in Sources */,
-				C9EE728224D26E0700ECED5D /* Intents.intentdefinition in Sources */,
+				E529B9C524A3DBE0002A3E60 /* VisionAPI.swift in Sources */,
+				E565649524D3280B006C8CFB /* AppIntent.swift in Sources */,
+				E512A40F24D0879D006687FA /* LoadingVC.swift in Sources */,
 				E5CF871424A1282B00EB96AB /* CameraVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,10 +740,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C9EE728D24D2701800ECED5D /* PBXTargetDependency */ = {
+		E50FFB0524C77BA000E3567D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C9EE728624D2701800ECED5D /* Boundri-Intents */;
-			targetProxy = C9EE728C24D2701800ECED5D /* PBXContainerItemProxy */;
+			target = E50FFAF924C77BA000E3567D /* Boundri-IntentsUI */;
+			targetProxy = E50FFB0424C77BA000E3567D /* PBXContainerItemProxy */;
+		};
+		E50FFB0824C77BA000E3567D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E50FFAF024C77BA000E3567D /* Boundri-Intents */;
+			targetProxy = E50FFB0724C77BA000E3567D /* PBXContainerItemProxy */;
 		};
 		E5CF86B224A0206100EB96AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -623,6 +763,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E50FFB0024C77BA000E3567D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E50FFB0124C77BA000E3567D /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		E5CF86A324A0205B00EB96AB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -642,13 +790,14 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C9EE729024D2701800ECED5D /* Debug */ = {
+		E50FFB0B24C77BA000E3567D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 456DBDA91F19AE11C0C89AB8 /* Pods-Boundri-Intents.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S29AA6XM46;
 				INFOPLIST_FILE = "Boundri-Intents/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -662,19 +811,60 @@
 			};
 			name = Debug;
 		};
-		C9EE729124D2701800ECED5D /* Release */ = {
+		E50FFB0C24C77BA000E3567D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 934B69409ADC93CED140632F /* Pods-Boundri-Intents.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S29AA6XM46;
 				INFOPLIST_FILE = "Boundri-Intents/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "boundri-app.Boundri-Intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E50FFB0D24C77BA000E3567D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S29AA6XM46;
+				INFOPLIST_FILE = "Boundri-IntentsUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "boundri-app.Boundri-IntentsUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E50FFB0E24C77BA000E3567D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S29AA6XM46;
+				INFOPLIST_FILE = "Boundri-IntentsUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "boundri-app.Boundri-IntentsUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -933,11 +1123,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C9EE728F24D2701800ECED5D /* Build configuration list for PBXNativeTarget "Boundri-Intents" */ = {
+		E50FFB0F24C77BA000E3567D /* Build configuration list for PBXNativeTarget "Boundri-IntentsUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C9EE729024D2701800ECED5D /* Debug */,
-				C9EE729124D2701800ECED5D /* Release */,
+				E50FFB0D24C77BA000E3567D /* Debug */,
+				E50FFB0E24C77BA000E3567D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E50FFB1024C77BA000E3567D /* Build configuration list for PBXNativeTarget "Boundri-Intents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E50FFB0B24C77BA000E3567D /* Debug */,
+				E50FFB0C24C77BA000E3567D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
