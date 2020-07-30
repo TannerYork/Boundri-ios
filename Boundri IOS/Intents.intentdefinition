@@ -7,13 +7,13 @@
 	<key>INIntentDefinitionModelVersion</key>
 	<string>1.1</string>
 	<key>INIntentDefinitionNamespace</key>
-	<string>XZnKEp</string>
+	<string>uSdOpU</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>19F101</string>
+	<string>18G5033</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>11E708</string>
+	<string>11C504</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>11.6</string>
+	<string>11.3.1</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -22,9 +22,9 @@
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescription</key>
-			<string>Read text from an image via Google Vision API</string>
+			<string>Read text from an image via Google Vision API.</string>
 			<key>INIntentDescriptionID</key>
-			<string>0ptZbv</string>
+			<string>LpWPhM</string>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
 				<key></key>
@@ -52,20 +52,28 @@
 				<key>INIntentResponseCodes</key>
 				<array>
 					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>${textResponse}</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>4gZOSj</string>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>The text in the image says ${textResponse}</string>
+						<string>${textResponse}</string>
 						<key>INIntentResponseCodeFormatStringID</key>
-						<string>p1r5MS</string>
+						<string>hFUfx1</string>
 						<key>INIntentResponseCodeName</key>
 						<string>success</string>
 						<key>INIntentResponseCodeSuccess</key>
 						<true/>
 					</dict>
 					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Sorry, something went wrong.</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>NQBk1L</string>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>Sorry, I wasn't able to read the text from the image.</string>
+						<string>Sorry, something went wrong.</string>
 						<key>INIntentResponseCodeFormatStringID</key>
-						<string>FKmXyB</string>
+						<string>9S1npa</string>
 						<key>INIntentResponseCodeName</key>
 						<string>failure</string>
 					</dict>
@@ -78,9 +86,9 @@
 				<array>
 					<dict>
 						<key>INIntentResponseParameterDisplayName</key>
-						<string>Text Response</string>
+						<string>textResponse</string>
 						<key>INIntentResponseParameterDisplayNameID</key>
-						<string>KtPtwY</string>
+						<string>cOkHYu</string>
 						<key>INIntentResponseParameterDisplayPriority</key>
 						<integer>1</integer>
 						<key>INIntentResponseParameterName</key>
@@ -95,7 +103,7 @@
 			<key>INIntentTitle</key>
 			<string>Read Text</string>
 			<key>INIntentTitleID</key>
-			<string>DVXbBy</string>
+			<string>zf56dI</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>

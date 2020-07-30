@@ -22,21 +22,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
     }
     
-    private func donateIntent(){
-        let intent = ReadTextIntent()
-        intent.suggestedInvocationPhrase = "Read Text With Boundary"
-        let interaction = INInteraction(intent: intent, response: nil)
-            
-        interaction.donate { (error) in
-            if error != nil {
-                if let error = error as NSError? {
-                    print("Interaction donation failed: \(error.description)")
-                } else {
-                    print("Successfully donated interaction")
-                }
-            }
-        }
-    }
+//    private func donateIntent(){
+//        let intent = ReadTextIntent()
+//        intent.suggestedInvocationPhrase = "Read Text With Boundary"
+//        let interaction = INInteraction(intent: intent, response: nil)
+//            
+//        interaction.donate { (error) in
+//            if error != nil {
+//                if let error = error as NSError? {
+//                    print("Interaction donation failed: \(error.description)")
+//                } else {
+//                    print("Successfully donated interaction")
+//                }
+//            }
+//        }
+//    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
