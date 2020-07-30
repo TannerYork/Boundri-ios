@@ -7,6 +7,7 @@
 //
 
 import Intents
+import MLKit
 
 class ReadTextIntentHandler: NSObject, ReadTextIntentHandling {
     
@@ -15,8 +16,30 @@ class ReadTextIntentHandler: NSObject, ReadTextIntentHandling {
     }
     
     func handle(intent: ReadTextIntent, completion: @escaping (ReadTextIntentResponse) -> Void) {
-        AppIntent().readTextHandler { (response) in
+//        AppIntent().readTextHandler { (response) in
+        readTextFromSampleImage { (response) in
             completion(.success(textResponse: response))
+        }
+    }
+    
+    func readTextFromSampleImage(handler: @escaping (String) -> Void) {
+        // let img = #imageLiteral(resourceName: "sample_img")
+        let imageURL = URL(string: "https://d2jaiao3zdxbzm.cloudfront.net/wp-content/uploads/figure-65.png")!
+        
+        if let imageData = try? Data(contentsOf: imageURL) {
+            let img = UIImage(data: imageData)!
+            
+            let visionImage = VisionImage(image: img)
+            visionImage.orientation = img.imageOrientation
+            
+            let textRecognizer = TextRecognizer.textRecognizer()
+            
+            textRecognizer.process(visionImage) { result, error in
+                guard error == nil, let result = result else {
+                    return handler("Error")
+                }
+                return handler(result.text)
+            }
         }
     }
 }

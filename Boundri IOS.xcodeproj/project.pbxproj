@@ -15,6 +15,7 @@
 		C97614F324D36FC500942557 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C97614E224D36EF200942557 /* Intents.intentdefinition */; };
 		C97614F524D3726B00942557 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97614F424D3726B00942557 /* AppIntent.swift */; };
 		C97614F624D3738A00942557 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97614F424D3726B00942557 /* AppIntent.swift */; };
+		DFACC61D609FCAE3F3E047C0 /* Pods_Boundri_Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4758BBBF1EF76752601F4CE1 /* Pods_Boundri_Intents.framework */; };
 		E512A40F24D0879D006687FA /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A40E24D0879D006687FA /* LoadingVC.swift */; };
 		E512A41424D0A6E5006687FA /* VisionOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41324D0A6E5006687FA /* VisionOptionCell.swift */; };
 		E512A41624D0C02F006687FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41524D0C02E006687FA /* LoginVC.swift */; };
@@ -121,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFACC61D609FCAE3F3E047C0 /* Pods_Boundri_Intents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,9 +242,10 @@
 		E5CF869C24A0205B00EB96AB /* Boundri IOS */ = {
 			isa = PBXGroup;
 			children = (
-				C97614E224D36EF200942557 /* Intents.intentdefinition */,
 				C9C5B81824B4EA4800BCB3A6 /* Boundri IOS.entitlements */,
 				E5CF869D24A0205B00EB96AB /* AppDelegate.swift */,
+				C97614F424D3726B00942557 /* AppIntent.swift */,
+				C97614E224D36EF200942557 /* Intents.intentdefinition */,
 				E512A41224D0A6A1006687FA /* Cells */,
 				E5765B6D24C8D1FB0066241B /* Modules */,
 				E5CF86CF24A023F400EB96AB /* ViewControllers */,
@@ -251,7 +254,6 @@
 				E5CF86A824A0206100EB96AB /* LaunchScreen.storyboard */,
 				E5CF86A324A0205B00EB96AB /* Main.storyboard */,
 				E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */,
-				C97614F424D3726B00942557 /* AppIntent.swift */,
 			);
 			path = "Boundri IOS";
 			sourceTree = "<group>";
@@ -277,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97614F024D36F8F00942557 /* Build configuration list for PBXNativeTarget "Boundri-Intents" */;
 			buildPhases = (
+				EDB41DEE6D0C1F4F6694633A /* [CP] Check Pods Manifest.lock */,
 				C97614E424D36F8F00942557 /* Sources */,
 				C97614E524D36F8F00942557 /* Frameworks */,
 				C97614E624D36F8F00942557 /* Resources */,
+				C5973BD225DA1F8BCFE354F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -546,6 +550,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C5973BD225DA1F8BCFE354F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Boundri-Intents/Pods-Boundri-Intents-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D856D84B5FC24724735DE50D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -562,6 +583,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Boundri IOS-Boundri IOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDB41DEE6D0C1F4F6694633A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Boundri-Intents-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -660,6 +703,7 @@
 /* Begin XCBuildConfiguration section */
 		C97614F124D36F8F00942557 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 456DBDA91F19AE11C0C89AB8 /* Pods-Boundri-Intents.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S29AA6XM46;
@@ -680,6 +724,7 @@
 		};
 		C97614F224D36F8F00942557 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 934B69409ADC93CED140632F /* Pods-Boundri-Intents.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S29AA6XM46;
