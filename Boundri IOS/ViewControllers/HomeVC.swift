@@ -9,6 +9,7 @@
 import Foundation
 import AVFoundation
 import UIKit
+import Intents
 
 class HomeVC: UIViewController {
     
@@ -43,6 +44,7 @@ class HomeVC: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        INInteraction(intent: ReadTextIntent(), response: nil).donate(completion: nil)
         
         // Set table view data source and delegate
         tableView.dataSource = self

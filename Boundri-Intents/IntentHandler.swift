@@ -8,20 +8,6 @@
 
 import Intents
 
-class ReadTextIntentHandler: NSObject, ReadTextIntentHandling {
-    
-    func confirm(intent: ReadTextIntent, completion: @escaping (ReadTextIntentResponse) -> Void) {
-        completion(ReadTextIntentResponse(code: .ready, userActivity: nil))
-    }
-    
-    func handle(intent: ReadTextIntent, completion: @escaping (ReadTextIntentResponse) -> Void) {
-//        AppIntent().readTextHandler { (response) in
-        AppIntent().readTextFromSampleImageHandler { (response) in
-            completion(.success(textResponse: response))
-        }
-    }
-}
-
 class IntentHandler: INExtension {
     
     override func handler(for intent: INIntent) -> Any {

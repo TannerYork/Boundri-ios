@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,7 +18,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+//        donateIntent()
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+    
+    private func donateIntent(){
+        let intent = ReadTextIntent()
+        intent.suggestedInvocationPhrase = "Read Text With Boundary"
+        let interaction = INInteraction(intent: intent, response: nil)
+            
+        interaction.donate { (error) in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("Interaction donation failed: \(error.description)")
+                } else {
+                    print("Successfully donated interaction")
+                }
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
