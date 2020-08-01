@@ -41,6 +41,12 @@ class VisionOutputVC: UIViewController {
         super.viewDidAppear(animated)
         self.visionOutputTextView.text = visionOutput
         checkForPhotoAccess()
+        
+        let utterance = AVSpeechUtterance(string: visionOutput)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
     }
     
     //MARK: Actions
