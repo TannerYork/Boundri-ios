@@ -1,6 +1,9 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+# comment out if it causes a problem
+# Tas needs it to run on her hard drive
+project 'Boundri IOS.xcodeproj'
 
 target 'Boundri IOS' do
   # Comment the next line if you don't want to use dynamic frameworks

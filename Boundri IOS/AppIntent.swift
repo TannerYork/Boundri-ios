@@ -2,52 +2,30 @@
 //  AppIntent.swift
 //  Boundri IOS
 //
-//  Created by Tasfia Addrita on 7/29/20.
+//  Created by Tasfia Addrita on 7/30/20.
 //  Copyright © 2020 Boundri. All rights reserved.
 //
 
 import Foundation
-import Intents
-//import MLKit 
+import MLKit
 
 class AppIntent {
-    
-    // HomeTVC
-    // INInteraction(intent: ReadTextIntent(), response: nil).donate(completion: nil)
-    
-//    class func readText() {
-//        let intent = ReadTextIntent()
-//        intent.suggestedInvocationPhrase = "Read text"
-//        
-//        let interaction = INInteraction(intent: intent, response: nil)
-//        
-//        interaction.donate { error in
-//            if let error = error as NSError? {
-//                print("Interaction donation failed: \(error.description)")
-//            } else {
-//                print("Successfully donated interaction.")
-//            }
-//        }
-//    }
-    
-    func readTextFromSampleImageHandler(handler: @escaping (String) -> Void) {
-        
-//        if let sampleImg = UIImage(named: "sample_img.png") {
-//            let visionImage = VisionImage(image: sampleImg)
-//            visionImage.orientation = sampleImg.imageOrientation
-//            
-//            let textRecognizer = TextRecognizer.textRecognizer()
-//            
-//            textRecognizer.process(visionImage) { result, error in
-//                guard error == nil, let result = result else {
-//                    return handler("error")
-//                }
-//                return handler(result.text)
-//            }
-//        }
+    func readTextHandler(handler: @escaping (String) -> Void) {
+        return handler("please work for the love of god")
     }
     
-    func readTextHandler(handler: @escaping (String) -> Void) {
-        return handler("Please work.")
+    func readTextFromSampleImage(handler: @escaping (String) -> Void) {
+        let img = #imageLiteral(resourceName: "sample_img")
+        let visionImage = VisionImage(image: img)
+        visionImage.orientation = img.imageOrientation
+        
+        let textRecognizer = TextRecognizer.textRecognizer()
+        
+        textRecognizer.process(visionImage) { result, error in
+            guard error == nil, let result = result else {
+                return handler("Error")
+            }
+            return handler(result.text)
+        }
     }
 }

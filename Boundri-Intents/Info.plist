@@ -30,6 +30,8 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
+				<string>OpenDetectObjectCameraIntent</string>
+				<string>OpenReadTextCameraIntent</string>
 				<string>ReadTextIntent</string>
 			</array>
 		</dict>

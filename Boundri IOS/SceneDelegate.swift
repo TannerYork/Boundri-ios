@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,10 +15,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        if let userActivity = connectionOptions.userActivities.first {
+            if userActivity.activityType == "OpenReadTextCameraIntent" {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
+                vc.visionOption = "Read Text"
+
+                // present the desired view
+                let rootViewController = window?.rootViewController as? UINavigationController
+                rootViewController?.pushViewController(vc, animated: true)
+            } else if userActivity.activityType == "OpenDetectObjectCameraIntent" {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
+                vc.visionOption = "Detect Objects"
+
+                // present the desired view
+                let rootViewController = window?.rootViewController as? UINavigationController
+                rootViewController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+    
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        if userActivity.activityType == "OpenReadTextCameraIntent" {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
+            vc.visionOption = "Read Text"
+
+            // present the desired view
+            let rootViewController = window?.rootViewController as? UINavigationController
+            
+            rootViewController?.pushViewController(vc, animated: true)
+        } else if userActivity.activityType == "OpenDetectObjectCameraIntent" {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
+            vc.visionOption = "Detect Objects"
+
+            // present the desired view
+            let rootViewController = window?.rootViewController as? UINavigationController
+            rootViewController?.pushViewController(vc, animated: true)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
