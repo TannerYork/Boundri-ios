@@ -16,7 +16,6 @@
 		C97614F524D3726B00942557 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97614F424D3726B00942557 /* AppIntent.swift */; };
 		C97614F624D3738A00942557 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97614F424D3726B00942557 /* AppIntent.swift */; };
 		DFACC61D609FCAE3F3E047C0 /* Pods_Boundri_Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4758BBBF1EF76752601F4CE1 /* Pods_Boundri_Intents.framework */; };
-		E512A40F24D0879D006687FA /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A40E24D0879D006687FA /* LoadingVC.swift */; };
 		E512A41424D0A6E5006687FA /* VisionOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41324D0A6E5006687FA /* VisionOptionCell.swift */; };
 		E512A41624D0C02F006687FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41524D0C02E006687FA /* LoginVC.swift */; };
 		E512A41A24D0C8B7006687FA /* VisionCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41924D0C8B7006687FA /* VisionCameraVC.swift */; };
@@ -93,7 +92,6 @@
 		CE10927030BE7AF0AA4020FF /* Pods-Boundri IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS.release.xcconfig"; path = "Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS.release.xcconfig"; sourceTree = "<group>"; };
 		D89D08DF759B46E28DBFCA93 /* Pods-Boundri IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOS.debug.xcconfig"; path = "Target Support Files/Pods-Boundri IOS/Pods-Boundri IOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E50FFAFB24C77BA000E3567D /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		E512A40E24D0879D006687FA /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		E512A41324D0A6E5006687FA /* VisionOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOptionCell.swift; sourceTree = "<group>"; };
 		E512A41524D0C02E006687FA /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E512A41924D0C8B7006687FA /* VisionCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionCameraVC.swift; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				E5C4390824B0E73200DA5FA9 /* DemoViewControllers */,
-				E512A40E24D0879D006687FA /* LoadingVC.swift */,
 				E512A41524D0C02E006687FA /* LoginVC.swift */,
 				E565649224D1DCFF006C8CFB /* HomeVC.swift */,
 				E512A41924D0C8B7006687FA /* VisionCameraVC.swift */,
@@ -642,7 +639,6 @@
 				E5D84D9624BE03DE00DD7760 /* VIsionCell.swift in Sources */,
 				E529B9C524A3DBE0002A3E60 /* VisionAPI.swift in Sources */,
 				C97614F524D3726B00942557 /* AppIntent.swift in Sources */,
-				E512A40F24D0879D006687FA /* LoadingVC.swift in Sources */,
 				E5CF871424A1282B00EB96AB /* CameraVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

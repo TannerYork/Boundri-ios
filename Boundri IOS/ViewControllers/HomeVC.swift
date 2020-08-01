@@ -45,7 +45,9 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         INInteraction(intent: ReadTextIntent(), response: nil).donate(completion: nil)
-        
+        INInteraction(intent: OpenReadTextCameraIntent(), response: nil).donate(completion: nil)
+        INInteraction(intent: OpenDetectObjectCameraIntent(), response: nil).donate(completion: nil)
+
         // Set table view data source and delegate
         tableView.dataSource = self
         tableView.delegate = self
@@ -156,7 +158,6 @@ extension HomeVC: AVCapturePhotoCaptureDelegate {
         
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
         let devices = deviceDiscoverySession.devices
-        print(devices)
         for device in devices {
             print(device)
             if device.position == .front {

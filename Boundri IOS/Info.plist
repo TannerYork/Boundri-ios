@@ -28,6 +28,8 @@
 	<string>Use Siri to call commands.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>OpenDetectObjectCameraIntent</string>
+		<string>OpenReadTextCameraIntent</string>
 		<string>ReadTextIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>

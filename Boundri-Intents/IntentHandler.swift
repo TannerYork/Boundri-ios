@@ -44,12 +44,42 @@ class ReadTextIntentHandler: NSObject, ReadTextIntentHandling {
     }
 }
 
+class OpenReadTextCameraIntentHandler: NSObject, OpenReadTextCameraIntentHandling {
+    
+    func confirm(intent: OpenReadTextCameraIntent, completion: @escaping (OpenReadTextCameraIntentResponse) -> Void) {
+        completion(OpenReadTextCameraIntentResponse(code: .ready, userActivity: nil))
+    }
+    
+    func handle(intent: OpenReadTextCameraIntent, completion: @escaping (OpenReadTextCameraIntentResponse) -> Void) {
+        let activity  = NSUserActivity(activityType: "OpenReadTextCameraIntent")
+        completion(OpenReadTextCameraIntentResponse(code: .continueInApp, userActivity: activity))
+    }
+
+}
+
+class OpenDetectObjectCameraIntentHandler: NSObject, OpenDetectObjectCameraIntentHandling {
+    func confirm(intent: OpenDetectObjectCameraIntent, completion: @escaping (OpenDetectObjectCameraIntentResponse) -> Void) {
+        completion(OpenDetectObjectCameraIntentResponse(code: .ready, userActivity: nil))
+    }
+
+    func handle(intent: OpenDetectObjectCameraIntent, completion: @escaping (OpenDetectObjectCameraIntentResponse) -> Void) {
+        let activity  = NSUserActivity(activityType: "OpenDetectObjectCameraIntent")
+        completion(OpenDetectObjectCameraIntentResponse(code: .continueInApp, userActivity: activity))
+    }
+}
+
 class IntentHandler: INExtension {
     
     override func handler(for intent: INIntent) -> Any {
-        guard intent is ReadTextIntent else {
-            fatalError("Unhandled error.")
+        switch  intent {
+        case is ReadTextIntent:
+            return ReadTextIntentHandler()
+        case is OpenReadTextCameraIntent:
+            return OpenReadTextCameraIntentHandler()
+        case is OpenDetectObjectCameraIntent:
+            return OpenDetectObjectCameraIntentHandler()
+        default:
+            fatalError()
         }
-        return ReadTextIntentHandler()
     }
 }
