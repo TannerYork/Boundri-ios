@@ -219,7 +219,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="visionCameraView" destination="RvY-bw-ara" id="1Hx-zp-SWr"/>
-                        <segue destination="QyN-tT-JJ1" kind="push" identifier="segueToVisionOutputVC" id="DKL-vv-537"/>
+                        <segue destination="QyN-tT-JJ1" kind="presentation" identifier="segueToVisionOutputVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="DKL-vv-537"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxo-gG-t64" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -234,26 +234,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="w4a-OC-7ac">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JnQ-4N-l8Z">
+                                <rect key="frame" x="20" y="143" width="374" height="236"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4a-OC-7ac">
+                                        <rect key="frame" x="8" y="8" width="358" height="228"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="228" id="Npq-y7-bUW"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.10049229452054795" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="w4a-OC-7ac" secondAttribute="bottom" id="7C3-Qj-Hsh"/>
+                                    <constraint firstItem="w4a-OC-7ac" firstAttribute="top" secondItem="JnQ-4N-l8Z" secondAttribute="topMargin" id="XOf-VV-9Jn"/>
+                                    <constraint firstItem="w4a-OC-7ac" firstAttribute="leading" secondItem="JnQ-4N-l8Z" secondAttribute="leadingMargin" id="ewc-XK-wov"/>
+                                    <constraint firstItem="w4a-OC-7ac" firstAttribute="trailing" secondItem="JnQ-4N-l8Z" secondAttribute="trailingMargin" id="q14-IM-SbI"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Voice activation phrase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMo-Sr-BKK">
+                                <rect key="frame" x="37" y="75" width="341" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="p1A-4L-3gJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="0.5990742722739727" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewP-Gk-lF1">
+                                <rect key="frame" x="118" y="758" width="179" height="66"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="lhe-6R-mSC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneWasPressed" destination="QyN-tT-JJ1" eventType="touchUpInside" id="SX8-ey-lfH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="w4a-OC-7ac" firstAttribute="top" secondItem="EaD-QU-wgB" secondAttribute="top" id="KQo-D1-wXJ"/>
-                            <constraint firstItem="w4a-OC-7ac" firstAttribute="leading" secondItem="yjH-Zo-kF8" secondAttribute="leadingMargin" id="NjH-B0-pYp"/>
-                            <constraint firstItem="w4a-OC-7ac" firstAttribute="trailing" secondItem="yjH-Zo-kF8" secondAttribute="trailingMargin" id="bK6-9S-gfd"/>
-                            <constraint firstItem="w4a-OC-7ac" firstAttribute="bottom" secondItem="EaD-QU-wgB" secondAttribute="bottom" id="lbP-BV-CJX"/>
+                            <constraint firstItem="DMo-Sr-BKK" firstAttribute="centerX" secondItem="yjH-Zo-kF8" secondAttribute="centerX" id="4pt-Q9-Fp3"/>
+                            <constraint firstItem="DMo-Sr-BKK" firstAttribute="top" secondItem="EaD-QU-wgB" secondAttribute="top" constant="31" id="GL2-rh-eQw"/>
+                            <constraint firstItem="ewP-Gk-lF1" firstAttribute="leading" secondItem="EaD-QU-wgB" secondAttribute="leading" constant="118" id="HYX-KS-qpj"/>
+                            <constraint firstItem="JnQ-4N-l8Z" firstAttribute="top" secondItem="DMo-Sr-BKK" secondAttribute="bottom" constant="38" id="Qwr-xh-pmc"/>
+                            <constraint firstItem="EaD-QU-wgB" firstAttribute="bottom" secondItem="ewP-Gk-lF1" secondAttribute="bottom" constant="38" id="VHR-aX-nv7"/>
+                            <constraint firstItem="JnQ-4N-l8Z" firstAttribute="leading" secondItem="yjH-Zo-kF8" secondAttribute="leadingMargin" id="ZDi-vY-RFK"/>
+                            <constraint firstItem="DMo-Sr-BKK" firstAttribute="centerX" secondItem="JnQ-4N-l8Z" secondAttribute="centerX" id="dSW-UP-U9R"/>
+                            <constraint firstItem="ewP-Gk-lF1" firstAttribute="centerX" secondItem="JnQ-4N-l8Z" secondAttribute="centerX" id="ny7-p2-DtF"/>
+                            <constraint firstItem="DMo-Sr-BKK" firstAttribute="leading" secondItem="EaD-QU-wgB" secondAttribute="leading" constant="37" id="zZE-cx-Sdd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EaD-QU-wgB"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="jag-VQ-JBL"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="activationPhraseLabel" destination="DMo-Sr-BKK" id="b2T-6I-JEL"/>
+                        <outlet property="doneButton" destination="ewP-Gk-lF1" id="a3w-J0-hjj"/>
+                        <outlet property="intentBox" destination="JnQ-4N-l8Z" id="VxS-O8-ciP"/>
                         <outlet property="visionOutputBackground" destination="yjH-Zo-kF8" id="Tde-LY-6Bf"/>
                         <outlet property="visionOutputTextView" destination="w4a-OC-7ac" id="s3C-1N-mMw"/>
                         <segue destination="9PH-2U-4uy" kind="unwind" identifier="unwindToVisionCameraVC" unwindAction="unwind:" id="sCh-Vw-id9"/>
@@ -262,7 +308,7 @@
                 <exit id="9PH-2U-4uy" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfm-CO-GfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5919" y="27"/>
+            <point key="canvasLocation" x="5917.3913043478269" y="26.785714285714285"/>
         </scene>
         <!--Boundri-->
         <scene sceneID="gH0-TO-nYL">
@@ -283,8 +329,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-Os-eHp">
-                                                    <rect key="frame" x="20" y="10" width="38" height="39"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.dust" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-Os-eHp">
+                                                    <rect key="frame" x="20" y="11" width="38" height="40"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="38" id="uO9-ll-W6x"/>
@@ -364,6 +410,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRw-g3-Z3k">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -376,6 +423,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="sun.dust" catalog="system" width="128" height="119"/>
     </resources>
 </document>

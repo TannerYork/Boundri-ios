@@ -15,6 +15,7 @@ class VisionCameraVC: UIViewController {
     //MARK: Properties
     @IBOutlet var visionCameraView: UIView!
     var visionOption: String = ""
+    var activationPhrase: String = ""
     var visionOutput: String! {
         didSet {
             self.performSegue(withIdentifier: "segueToVisionOutputVC", sender: self)
@@ -54,11 +55,13 @@ class VisionCameraVC: UIViewController {
             textRecognizer.process(visionImage) { result, error in
                 guard error == nil, let result = result else { return }
                 // Open Intents GUI with resulting text or show output on new page
+                self.activationPhrase = "Read text in image"
                 self.visionOutput = result.text
             }
-        } else if visionOption == "Detect Objects" {
+        } else if visionOption == "Describe Scene" {
             // Call GO modeule or Object Detection Cocopod
-            self.visionOutput = "Need to add Object Detection Cocopod"
+            self.activationPhrase = "Describe scene in image"
+            self.visionOutput = "To your left there's a Chair, directly ahead of you there's a Television and Person, and to your right there's a Laptop and Computer keyboard."
         } else {
             let alert = UIAlertController(title: "Error", message: "An improper vision option was given", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in return }
@@ -71,6 +74,7 @@ class VisionCameraVC: UIViewController {
         if segue.identifier == "segueToVisionOutputVC" {
             guard let view = segue.destination as? VisionOutputVC else {return}
             view.visionOutput = visionOutput
+            view.activationPhrase = activationPhrase
         }
     }
     
@@ -141,15 +145,11 @@ extension VisionCameraVC: AVCapturePhotoCaptureDelegate {
         
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
         let devices = deviceDiscoverySession.devices
-        print(devices)
         for device in devices {
-            print(device)
             if device.position == .back {
                 backCamera = device
-                print("Set backcamera to \(device)")
             } else if device.position == .front {
                 frontCamera = device
-                print("Set frontcamera to \(device)")
             }
         }
         
