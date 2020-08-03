@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             } else if userActivity.activityType == "OpenDetectObjectCameraIntent" {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-                vc.visionOption = "Detect Objects"
+                vc.visionOption = "Describe Scene"
 
                 // present the desired view
                 let rootViewController = window?.rootViewController as? UINavigationController
