@@ -20,8 +20,6 @@ class HomeVC: UIViewController {
     let captureSession = AVCaptureSession()
     let settings = AVCapturePhotoSettings()
     var previewLayer: AVCaptureVideoPreviewLayer?
-    
-    //Input
     var frontCamera: AVCaptureDevice?
     
     // Vision Options
@@ -31,7 +29,7 @@ class HomeVC: UIViewController {
           "details": "Reading any text in the cameras view outloud.",
           "icon": "doc.text"
         ],
-        [ "title": "Detect Objects",
+        [ "title": "Describe Scene",
           "details": "Tells you where various opjects are and what their relationship to you are.",
           "icon": "keyboard"
         ]
@@ -56,7 +54,6 @@ class HomeVC: UIViewController {
         self.navigationController!.navigationBar.prefersLargeTitles = true
         tableView.backgroundColor = .clear
         setupBackground()
-        checkForPhotoAccess()
     }
     
     //MARK: Actions
@@ -70,7 +67,12 @@ class HomeVC: UIViewController {
             blurEffectView.frame = self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
+            let backgroundImage = UIImageView()
+            backgroundImage.image = UIImage(named: "background-image")
+            backgroundImage.frame = self.view.frame
+            
             view.insertSubview(blurEffectView, at: 0)
+            view.insertSubview(backgroundImage, at: 0)
         } else {
             view.backgroundColor = .black
         }
@@ -131,69 +133,4 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
        }
     }
 }
-
-//MARK: Background Delegate
-//Extinsion for setting up the camera view and its options
-extension HomeVC: AVCapturePhotoCaptureDelegate {
-    func checkForPhotoAccess() {
-        switch AVCaptureDevice.authorizationStatus(for: .video) {
-        case .authorized: // The user has previously granted access to the camera.
-            self.setupCaptureSession(visionOutputBackground)
-            
-        @unknown default:
-            let alert = UIAlertController(title: "Error", message: "An unknown error hass occured", preferredStyle: .alert)
-            let confirmAction = UIAlertAction(title: "Ok", style: .default)
-            alert.addAction(confirmAction)
-            return
-        }
-    }
-    
-    func setupCaptureSession(_ view: UIView) {
-        captureSession.sessionPreset = .photo
-        
-        //Errors
-        enum CameraSetupErros: Error {
-            case invaledCamera
-        }
-        
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
-        let devices = deviceDiscoverySession.devices
-        for device in devices {
-            print(device)
-            if device.position == .front {
-                frontCamera = device
-                print("Set frontcamera to \(device)")
-            }
-        }
-        
-        //Configure settings
-        //        settings.isAutoStillImageStabilizationEnabled = true
-        settings.isHighResolutionPhotoEnabled = false
-        settings.flashMode = .auto
-        
-        do {
-            guard let captureDeviceInput = try? AVCaptureDeviceInput(device: frontCamera!) else {
-                throw CameraSetupErros.invaledCamera
-            }
-            if let inputs = captureSession.inputs as? [AVCaptureDeviceInput] {
-                for input in inputs {
-                    captureSession.removeInput(input)
-                }
-            }
-            captureSession.addInput(captureDeviceInput)
-            
-            //Setup camera preview layer
-            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-            previewLayer?.videoGravity = .resizeAspectFill
-            previewLayer?.connection?.videoOrientation = .portrait
-            previewLayer?.frame = view.frame
-            view.layer.insertSublayer(previewLayer!, at: 0)
-            captureSession.startRunning()
-            
-        } catch {
-            print("Error: \(error.localizedDescription)")
-        }
-    }
-}
-
 
