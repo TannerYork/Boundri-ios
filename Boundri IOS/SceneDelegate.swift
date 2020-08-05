@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             if userActivity.activityType == "OpenReadTextCameraIntent" {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-                vc.visionOption = "Read Text"
+                vc.visionOption = .readText
 
                 // present the desired view
                 let rootViewController = window?.rootViewController as? UINavigationController
@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             } else if userActivity.activityType == "OpenDetectObjectCameraIntent" {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-                vc.visionOption = "Describe Scene"
+                vc.visionOption = .describeScene
 
                 // present the desired view
                 let rootViewController = window?.rootViewController as? UINavigationController
@@ -40,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if userActivity.activityType == "OpenReadTextCameraIntent" {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-            vc.visionOption = "Read Text"
+            vc.visionOption = .readText
 
             // present the desired view
             let rootViewController = window?.rootViewController as? UINavigationController
@@ -49,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else if userActivity.activityType == "OpenDetectObjectCameraIntent" {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-            vc.visionOption = "Describe Scene"
+            vc.visionOption = .describeScene
 
             // present the desired view
             let rootViewController = window?.rootViewController as? UINavigationController

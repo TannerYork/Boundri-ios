@@ -23,17 +23,8 @@ class HomeVC: UIViewController {
     var frontCamera: AVCaptureDevice?
     
     // Vision Options
-    var selectedVisionOption: String  = ""
-    let visionOptions: [[String:String]] = [
-        [ "title": "Read Text",
-          "details": "Reading any text in the cameras view outloud.",
-          "icon": "doc.text"
-        ],
-        [ "title": "Describe Scene",
-          "details": "Tells you where various opjects are and what their relationship to you are.",
-          "icon": "keyboard"
-        ]
-    ]
+    var visionOptions = VisionOptionsManager.shared.avalibleOptions
+    var selectedVisionOption: VisionOptionType!
     
     // Header Fadding
     var headerViewOriginalHeight: CGFloat = 0
@@ -107,16 +98,16 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         cell.detailsLabel!.textColor = .white
         
         // Set cell values
-        cell.headlineLabel!.text = visionOptions[indexPath.row]["title"]
-        cell.detailsLabel!.text = visionOptions[indexPath.row]["details"]
-        cell.icon.image = UIImage(systemName: visionOptions[indexPath.row]["icon"]!)
+        cell.headlineLabel!.text = visionOptions[indexPath.row].name
+        cell.detailsLabel!.text = visionOptions[indexPath.row].details
+        cell.icon.image = UIImage(systemName: visionOptions[indexPath.row].icon)
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectedVisionOption = visionOptions[indexPath.row]["title"]!
+        selectedVisionOption = visionOptions[indexPath.row].type
         self.performSegue(withIdentifier: "segueToVisionCameraVC", sender: self)
     }
     

@@ -14,7 +14,7 @@ class VisionCameraVC: UIViewController {
     
     //MARK: Properties
     @IBOutlet var visionCameraView: UIView!
-    var visionOption: String = ""
+    var visionOption: VisionOptionType!
     var activationPhrase: String = ""
     var visionOutput: String! {
         didSet {
@@ -43,33 +43,6 @@ class VisionCameraVC: UIViewController {
     
     
     //MARK: Actions
-    
-    func processImage(_ image: UIImage, with visionOption: String) {
-        
-        let visionImage = VisionImage(image: image)
-        visionImage.orientation = image.imageOrientation
-        
-        if visionOption == "Read Text" {
-            // Use GO or GoogleVision Modules
-            let textRecognizer = TextRecognizer.textRecognizer()
-            textRecognizer.process(visionImage) { result, error in
-                guard error == nil, let result = result else { return }
-                // Open Intents GUI with resulting text or show output on new page
-                self.activationPhrase = "Read text in image"
-                self.visionOutput = result.text
-            }
-        } else if visionOption == "Describe Scene" {
-            // Call GO modeule or Object Detection Cocopod
-            self.activationPhrase = "Describe scene in image"
-            self.visionOutput = "To your left there's a Chair, directly ahead of you there's a Television and Person, and to your right there's a Laptop and Computer keyboard."
-        } else {
-            let alert = UIAlertController(title: "Error", message: "An improper vision option was given", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in return }
-            alert.addAction(okAction)
-            self.present(alert, animated: true)
-        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToVisionOutputVC" {
             guard let view = segue.destination as? VisionOutputVC else {return}
@@ -204,7 +177,10 @@ extension VisionCameraVC: AVCapturePhotoCaptureDelegate {
             return
         }
         
-        processImage(capturedImage, with: visionOption)
+        VisionOptionsManager.shared.proccess(image: capturedImage, with: self.visionOption) { (results) in
+            self.activationPhrase = results["phrase"]!
+            self.visionOutput = results["output"]!
+        }
     }
     
 }
