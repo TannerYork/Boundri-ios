@@ -388,7 +388,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WRn-vP-qmB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Boundri" id="10g-CS-6vL"/>
+                    <navigationItem key="navigationItem" title="Boundri" id="10g-CS-6vL">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="WW3-TY-JA9">
+                            <connections>
+                                <action selector="settingsBarButtonWasPressed" destination="0Hp-0w-7Xx" id="UZh-Ph-ENW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="gai-UM-Qwr" id="R2R-5e-qtR"/>
@@ -408,7 +414,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRw-g3-Z3k">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

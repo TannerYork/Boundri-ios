@@ -23,7 +23,9 @@
 		E512A41E24D0E1EE006687FA /* CustomNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512A41D24D0E1EE006687FA /* CustomNC.swift */; };
 		E529B9C524A3DBE0002A3E60 /* VisionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529B9C424A3DBE0002A3E60 /* VisionAPI.swift */; };
 		E565649324D1DCFF006C8CFB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E565649224D1DCFF006C8CFB /* HomeVC.swift */; };
-		E594399224D9C5EB003E0833 /* VisionOptionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E594399124D9C5EB003E0833 /* VisionOptionsManager.swift */; };
+		E594399224D9C5EB003E0833 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E594399124D9C5EB003E0833 /* ImageProcessor.swift */; };
+		E5BAE6C424DBA86B006B2A39 /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAE6C324DBA86B006B2A39 /* ShortcutManager.swift */; };
+		E5BAE6C624DBAA8E006B2A39 /* ShortcutsManagerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAE6C524DBAA8E006B2A39 /* ShortcutsManagerTVC.swift */; };
 		E5CF869E24A0205B00EB96AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869D24A0205B00EB96AB /* AppDelegate.swift */; };
 		E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */; };
 		E5CF86A524A0205B00EB96AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CF86A324A0205B00EB96AB /* Main.storyboard */; };
@@ -99,7 +101,9 @@
 		E512A41D24D0E1EE006687FA /* CustomNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNC.swift; sourceTree = "<group>"; };
 		E529B9C424A3DBE0002A3E60 /* VisionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAPI.swift; sourceTree = "<group>"; };
 		E565649224D1DCFF006C8CFB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		E594399124D9C5EB003E0833 /* VisionOptionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOptionsManager.swift; sourceTree = "<group>"; };
+		E594399124D9C5EB003E0833 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		E5BAE6C324DBA86B006B2A39 /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
+		E5BAE6C524DBAA8E006B2A39 /* ShortcutsManagerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsManagerTVC.swift; sourceTree = "<group>"; };
 		E5CF869A24A0205B00EB96AB /* Boundri IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boundri IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CF869D24A0205B00EB96AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,7 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				E529B9C424A3DBE0002A3E60 /* VisionAPI.swift */,
-				E594399124D9C5EB003E0833 /* VisionOptionsManager.swift */,
+				E594399124D9C5EB003E0833 /* ImageProcessor.swift */,
+				E5BAE6C324DBA86B006B2A39 /* ShortcutManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				E512A41924D0C8B7006687FA /* VisionCameraVC.swift */,
 				E512A41B24D0CFFC006687FA /* VisionOutputVC.swift */,
 				E512A41D24D0E1EE006687FA /* CustomNC.swift */,
+				E5BAE6C524DBAA8E006B2A39 /* ShortcutsManagerTVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -629,16 +635,18 @@
 				E565649324D1DCFF006C8CFB /* HomeVC.swift in Sources */,
 				C97614E324D36EF200942557 /* Intents.intentdefinition in Sources */,
 				E512A41424D0A6E5006687FA /* VisionOptionCell.swift in Sources */,
+				E5BAE6C624DBAA8E006B2A39 /* ShortcutsManagerTVC.swift in Sources */,
 				E512A41624D0C02F006687FA /* LoginVC.swift in Sources */,
 				E5CF869E24A0205B00EB96AB /* AppDelegate.swift in Sources */,
 				E5CF871824A12C0C00EB96AB /* ImageViewVC.swift in Sources */,
+				E5BAE6C424DBA86B006B2A39 /* ShortcutManager.swift in Sources */,
 				E512A41E24D0E1EE006687FA /* CustomNC.swift in Sources */,
 				E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */,
 				E512A41C24D0CFFC006687FA /* VisionOutputVC.swift in Sources */,
 				E5D84D9624BE03DE00DD7760 /* VIsionCell.swift in Sources */,
 				E529B9C524A3DBE0002A3E60 /* VisionAPI.swift in Sources */,
 				C97614F524D3726B00942557 /* AppIntent.swift in Sources */,
-				E594399224D9C5EB003E0833 /* VisionOptionsManager.swift in Sources */,
+				E594399224D9C5EB003E0833 /* ImageProcessor.swift in Sources */,
 				E5CF871424A1282B00EB96AB /* CameraVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

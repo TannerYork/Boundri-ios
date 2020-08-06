@@ -14,7 +14,7 @@ class VisionCameraVC: UIViewController {
     
     //MARK: Properties
     @IBOutlet var visionCameraView: UIView!
-    var visionOption: VisionOptionType!
+    var shortcutKind: ShortcutsManager.Kind!
     var activationPhrase: String = ""
     var visionOutput: String! {
         didSet {
@@ -172,7 +172,7 @@ extension VisionCameraVC: AVCapturePhotoCaptureDelegate {
             return
         }
         
-        VisionOptionsManager.shared.proccess(image: capturedImage, with: self.visionOption) { (results) in
+        ImageProcessor.shared.proccess(image: capturedImage, with: self.shortcutKind) { (results) in
             self.activationPhrase = results["phrase"]!
             self.visionOutput = results["output"]!
         }

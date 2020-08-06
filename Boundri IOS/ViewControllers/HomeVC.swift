@@ -23,8 +23,8 @@ class HomeVC: UIViewController {
     var frontCamera: AVCaptureDevice?
     
     // Vision Options
-    var visionOptions = VisionOptionsManager.shared.avalibleOptions
-    var selectedVisionOption: VisionOptionType!
+    var visionOptions: [ShortcutsManager.Shortcut] = []
+    var selectedVisionOption: ShortcutsManager.Kind!
     
     // Header Fadding
     var headerViewOriginalHeight: CGFloat = 0
@@ -33,18 +33,21 @@ class HomeVC: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        INInteraction(intent: ReadTextIntent(), response: nil).donate(completion: nil)
-        INInteraction(intent: OpenReadTextCameraIntent(), response: nil).donate(completion: nil)
-        INInteraction(intent: OpenDetectObjectCameraIntent(), response: nil).donate(completion: nil)
 
         // Set table view data source and delegate
         tableView.dataSource = self
         tableView.delegate = self
     
+        reloadShortcuts()
+        
         // Setup custom styling
         self.navigationController!.navigationBar.prefersLargeTitles = true
         tableView.backgroundColor = .clear
         setupBackground()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        reloadShortcuts()
     }
     
     //MARK: Actions
@@ -72,12 +75,27 @@ class HomeVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToVisionCameraVC" {
             guard let view = segue.destination as? VisionCameraVC else {return}
-            view.visionOption = selectedVisionOption
+            view.shortcutKind = selectedVisionOption
             view.captureButtonWasPressed = false
         }
     }
     
     @IBAction func unwindToHomeVC( _ seg: UIStoryboardSegue) {
+    }
+    
+    
+    @IBAction func settingsBarButtonWasPressed() {
+        self.navigationController?.pushViewController(ShortcutsManagerTVC(), animated: true)
+    }
+    
+    func reloadShortcuts() {
+        ShortcutsManager.shared.loadShortcuts(kinds: ShortcutsManager.Kind.allCases) { [weak self] shortcuts in
+            self?.visionOptions = shortcuts.filter { $0.voiceShortcut != nil }
+            
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
     }
     
 }
@@ -90,6 +108,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VisionOptionCell") as! VisionOptionCell
+        let shortcut = visionOptions[indexPath.row]
         
         // Add dynamic type support
         cell.headlineLabel.font = UIFont.preferredFont(forTextStyle: .headline)
@@ -103,16 +122,17 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         cell.detailsLabel!.textColor = .white
         
         // Set cell values
-        cell.headlineLabel!.text = visionOptions[indexPath.row].name
-        cell.detailsLabel!.text = visionOptions[indexPath.row].details
-        cell.icon.image = UIImage(systemName: visionOptions[indexPath.row].icon)
+        cell.headlineLabel!.text = shortcut.kind.suggestedInvocationPhrase
+        let phrase = shortcut.voiceShortcut?.invocationPhrase ?? ""
+        cell.detailsLabel!.text = phrase.isEmpty ? nil : "Say \"" + phrase + "\""
+        cell.icon.image = UIImage(systemName: shortcut.kind.intentIcon)
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectedVisionOption = visionOptions[indexPath.row].type
+        selectedVisionOption = visionOptions[indexPath.row].kind
         self.performSegue(withIdentifier: "segueToVisionCameraVC", sender: self)
     }
     

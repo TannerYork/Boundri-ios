@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             if userActivity.activityType == "OpenReadTextCameraIntent" {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-                vc.visionOption = .readText
+                vc.shortcutKind = .openReadText
 
                 // present the desired view
                 let rootViewController = window?.rootViewController as? UINavigationController
@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             } else if userActivity.activityType == "OpenDetectObjectCameraIntent" {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-                vc.visionOption = .describeScene
+                vc.shortcutKind = .openDescribeScene
 
                 // present the desired view
                 let rootViewController = window?.rootViewController as? UINavigationController
@@ -40,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if userActivity.activityType == "OpenReadTextCameraIntent" {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-            vc.visionOption = .readText
+            vc.shortcutKind = .openReadText
 
             // present the desired view
             let rootViewController = window?.rootViewController as? UINavigationController
@@ -49,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else if userActivity.activityType == "OpenDetectObjectCameraIntent" {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-            vc.visionOption = .describeScene
+            vc.shortcutKind = .openDescribeScene
 
             // present the desired view
             let rootViewController = window?.rootViewController as? UINavigationController
