@@ -44,11 +44,6 @@ class VisionOutputVC: UIViewController {
         intentBox.layer.cornerRadius = 20
         doneButton.layer.cornerRadius = 30
         
-        // Setup custom backbutton and reactivate camera
-        self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(back(sender:)))
-        self.navigationItem.leftBarButtonItem = newBackButton
-        
         navigationItem.largeTitleDisplayMode = .never
         visionOutputTextView.font = UIFont.preferredFont(forTextStyle: .headline)
         visionOutputTextView!.adjustsFontForContentSizeCategory = true
@@ -99,19 +94,7 @@ class VisionOutputVC: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "unwindToVisionCameraVC" {
-            guard let view = segue.destination as? VisionCameraVC else {return}
-            view.captureButtonWasPressed = false
-        }
-    }
-    
     @IBAction func doneWasPressed() {
-        self.performSegue(withIdentifier: "unwindToVisionCameraVC", sender: self)
-    }
-    
-    @objc func back(sender: UIBarButtonItem) {
-        // Perform your custom actions
-        self.performSegue(withIdentifier: "unwindToVisionCameraVC", sender: self)
+        self.performSegue(withIdentifier: "unwindToHomeVC", sender: self)
     }
 }

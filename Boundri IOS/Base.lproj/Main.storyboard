@@ -302,11 +302,11 @@
                         <outlet property="intentBox" destination="JnQ-4N-l8Z" id="VxS-O8-ciP"/>
                         <outlet property="visionOutputBackground" destination="yjH-Zo-kF8" id="Tde-LY-6Bf"/>
                         <outlet property="visionOutputTextView" destination="w4a-OC-7ac" id="s3C-1N-mMw"/>
-                        <segue destination="9PH-2U-4uy" kind="unwind" identifier="unwindToVisionCameraVC" unwindAction="unwind:" id="sCh-Vw-id9"/>
+                        <segue destination="jrI-51-YNV" kind="unwind" identifier="unwindToHomeVC" unwindAction="unwindToHomeVC:" id="YXf-7L-unX"/>
                     </connections>
                 </viewController>
-                <exit id="9PH-2U-4uy" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfm-CO-GfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jrI-51-YNV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5917.3913043478269" y="26.785714285714285"/>
         </scene>
@@ -393,11 +393,9 @@
                     <connections>
                         <outlet property="tableView" destination="gai-UM-Qwr" id="R2R-5e-qtR"/>
                         <outlet property="visionOutputBackground" destination="xi9-Rz-r7j" id="moK-ej-auE"/>
-                        <segue destination="UTx-LB-cSk" kind="unwind" identifier="unwindToVisionCameraVC" unwindAction="unwind:" id="eHA-Jg-PvQ"/>
                         <segue destination="2d2-R2-aMA" kind="show" identifier="segueToVisionCameraVC" id="EAu-Nh-4G7"/>
                     </connections>
                 </viewController>
-                <exit id="UTx-LB-cSk" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUH-V5-SlS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4371" y="27"/>

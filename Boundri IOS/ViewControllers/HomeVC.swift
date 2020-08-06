@@ -73,8 +73,13 @@ class HomeVC: UIViewController {
         if segue.identifier == "segueToVisionCameraVC" {
             guard let view = segue.destination as? VisionCameraVC else {return}
             view.visionOption = selectedVisionOption
+            view.captureButtonWasPressed = false
         }
     }
+    
+    @IBAction func unwindToHomeVC( _ seg: UIStoryboardSegue) {
+    }
+    
 }
 
 //MARK: TableView Delegate

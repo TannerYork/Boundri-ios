@@ -57,12 +57,7 @@ class VisionCameraVC: UIViewController {
         let uniqueSettings = AVCapturePhotoSettings.init(from: settings)
         output?.capturePhoto(with: uniqueSettings, delegate: self)
     }
-    
-    @IBAction func unwind( _ seg: UIStoryboardSegue) {
-    }
 }
-
-
 
 
 //MARK: Capture Delegate
