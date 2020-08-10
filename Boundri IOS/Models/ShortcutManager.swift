@@ -47,6 +47,13 @@ class ShortcutsManager {
             case .openDescribeScene: return "Describe Scene"
             }
         }
+        
+        var activityType: String? {
+            switch self {
+            case .openReadText: return "OpenReadTextCameraIntent"
+            case .openDescribeScene: return "OpenDetectObjectCameraIntent"
+            }
+        }
     }
     
     struct Shortcut: Hashable {

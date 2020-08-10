@@ -19,7 +19,6 @@ class VisionOutputVC: UIViewController {
     @IBOutlet var activationPhraseLabel: UILabel!
     @IBOutlet var doneButton: UIButton!
     
-    
     var visionOutput: String = ""
     var activationPhrase: String = ""
     
@@ -92,9 +91,5 @@ class VisionOutputVC: UIViewController {
         } else {
             view.backgroundColor = .black
         }
-    }
-    
-    @IBAction func doneWasPressed() {
-        self.performSegue(withIdentifier: "unwindToHomeVC", sender: self)
     }
 }

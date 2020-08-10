@@ -16,44 +16,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let userActivity = connectionOptions.userActivities.first {
-            if userActivity.activityType == "OpenReadTextCameraIntent" {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-                vc.shortcutKind = .openReadText
-
-                // present the desired view
-                let rootViewController = window?.rootViewController as? UINavigationController
-                rootViewController?.pushViewController(vc, animated: true)
-            } else if userActivity.activityType == "OpenDetectObjectCameraIntent" {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-                vc.shortcutKind = .openDescribeScene
-
-                // present the desired view
-                let rootViewController = window?.rootViewController as? UINavigationController
-                rootViewController?.pushViewController(vc, animated: true)
+            ShortcutsManager.shared.loadShortcuts(kinds: ShortcutsManager.Kind.allCases) { shortcuts in
+                let addedShortcuts = shortcuts.filter { $0.voiceShortcut != nil }
+                for (index, shortcut) in addedShortcuts.enumerated() {
+                    if shortcut.kind.activityType == userActivity.activityType {
+                        let rootViewController = self.window?.rootViewController as? PhoneControlerVC
+                        rootViewController?.currentShortcut = index
+                        break
+                    }
+                }
             }
         }
     }
     
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-        if userActivity.activityType == "OpenReadTextCameraIntent" {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-            vc.shortcutKind = .openReadText
-
-            // present the desired view
-            let rootViewController = window?.rootViewController as? UINavigationController
-            
-            rootViewController?.pushViewController(vc, animated: true)
-        } else if userActivity.activityType == "OpenDetectObjectCameraIntent" {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "VisionCameraVC") as! VisionCameraVC
-            vc.shortcutKind = .openDescribeScene
-
-            // present the desired view
-            let rootViewController = window?.rootViewController as? UINavigationController
-            rootViewController?.pushViewController(vc, animated: true)
+        ShortcutsManager.shared.loadShortcuts(kinds: ShortcutsManager.Kind.allCases) { shortcuts in
+            let addedShortcuts = shortcuts.filter { $0.voiceShortcut != nil }
+            for (index, shortcut) in addedShortcuts.enumerated() {
+                if shortcut.kind.activityType == userActivity.activityType {
+                    let rootViewController = self.window?.rootViewController as? PhoneControlerVC
+                    rootViewController?.currentShortcut = index
+                    break
+                }
+            }
         }
     }
 
