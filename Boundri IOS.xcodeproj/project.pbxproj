@@ -24,13 +24,14 @@
 		E594399224D9C5EB003E0833 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E594399124D9C5EB003E0833 /* ImageProcessor.swift */; };
 		E5BAE6C424DBA86B006B2A39 /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAE6C324DBA86B006B2A39 /* ShortcutManager.swift */; };
 		E5BAE6C624DBAA8E006B2A39 /* ShortcutsManagerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAE6C524DBAA8E006B2A39 /* ShortcutsManagerTVC.swift */; };
-		E5BAE6C824DD09D2006B2A39 /* PhoneCameraControlerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAE6C724DD09D2006B2A39 /* PhoneCameraControlerVC.swift */; };
 		E5BAE6CC24E1A2A1006B2A39 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAE6CB24E1A2A1006B2A39 /* CameraController.swift */; };
 		E5CF869E24A0205B00EB96AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869D24A0205B00EB96AB /* AppDelegate.swift */; };
 		E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CF869F24A0205B00EB96AB /* SceneDelegate.swift */; };
 		E5CF86A524A0205B00EB96AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CF86A324A0205B00EB96AB /* Main.storyboard */; };
 		E5CF86A724A0206100EB96AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CF86A624A0206100EB96AB /* Assets.xcassets */; };
 		E5CF86AA24A0206100EB96AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CF86A824A0206100EB96AB /* LaunchScreen.storyboard */; };
+		E5DD8864251FAD5A004A2F5B /* PhoneControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DD8863251FAD5A004A2F5B /* PhoneControllerVC.swift */; };
+		E5DD8866251FB0F3004A2F5B /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DD8865251FB0F3004A2F5B /* SpeechSynthesizer.swift */; };
 		F288521CE1F3BF466C37B7BA /* Pods_Boundri_IOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1514E750205676EF25E81D /* Pods_Boundri_IOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +100,6 @@
 		E594399124D9C5EB003E0833 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		E5BAE6C324DBA86B006B2A39 /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
 		E5BAE6C524DBAA8E006B2A39 /* ShortcutsManagerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsManagerTVC.swift; sourceTree = "<group>"; };
-		E5BAE6C724DD09D2006B2A39 /* PhoneCameraControlerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCameraControlerVC.swift; sourceTree = "<group>"; };
 		E5BAE6CB24E1A2A1006B2A39 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		E5CF869A24A0205B00EB96AB /* Boundri IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boundri IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CF869D24A0205B00EB96AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +110,8 @@
 		E5CF86AB24A0206100EB96AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5CF86B024A0206100EB96AB /* Boundri IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boundri IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CF86BB24A0206100EB96AB /* Boundri IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boundri IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DD8863251FAD5A004A2F5B /* PhoneControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneControllerVC.swift; sourceTree = "<group>"; };
+		E5DD8865251FB0F3004A2F5B /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		E77E285F86034481B151F09C /* Pods-Boundri IOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boundri IOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Boundri IOSTests/Pods-Boundri IOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +202,7 @@
 				E594399124D9C5EB003E0833 /* ImageProcessor.swift */,
 				E5BAE6C324DBA86B006B2A39 /* ShortcutManager.swift */,
 				E5BAE6CB24E1A2A1006B2A39 /* CameraController.swift */,
+				E5DD8865251FB0F3004A2F5B /* SpeechSynthesizer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				E512A41524D0C02E006687FA /* LoginVC.swift */,
-				E5BAE6C724DD09D2006B2A39 /* PhoneCameraControlerVC.swift */,
+				E5DD8863251FAD5A004A2F5B /* PhoneControllerVC.swift */,
 				E512A41B24D0CFFC006687FA /* VisionOutputVC.swift */,
 				E512A41D24D0E1EE006687FA /* CustomNC.swift */,
 				E5BAE6C524DBAA8E006B2A39 /* ShortcutsManagerTVC.swift */,
@@ -623,10 +626,11 @@
 				E512A41E24D0E1EE006687FA /* CustomNC.swift in Sources */,
 				E5CF86A024A0205B00EB96AB /* SceneDelegate.swift in Sources */,
 				E512A41C24D0CFFC006687FA /* VisionOutputVC.swift in Sources */,
+				E5DD8864251FAD5A004A2F5B /* PhoneControllerVC.swift in Sources */,
 				E529B9C524A3DBE0002A3E60 /* VisionAPI.swift in Sources */,
 				C97614F524D3726B00942557 /* AppIntent.swift in Sources */,
 				E594399224D9C5EB003E0833 /* ImageProcessor.swift in Sources */,
-				E5BAE6C824DD09D2006B2A39 /* PhoneCameraControlerVC.swift in Sources */,
+				E5DD8866251FB0F3004A2F5B /* SpeechSynthesizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

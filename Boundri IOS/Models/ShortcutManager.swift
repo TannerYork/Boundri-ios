@@ -54,6 +54,14 @@ class ShortcutsManager {
             case .openDescribeScene: return "OpenDetectObjectCameraIntent"
             }
         }
+        
+        var gestureType: String? {
+            switch self {
+            case .openReadText: return "tap"
+            case .openDescribeScene: return "swipe"
+            }
+        }
+        
     }
     
     struct Shortcut: Hashable {

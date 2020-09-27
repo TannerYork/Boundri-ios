@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 for (index, shortcut) in addedShortcuts.enumerated() {
                     if shortcut.kind.activityType == userActivity.activityType {
                         let rootViewController = self.window?.rootViewController as? PhoneControlerVC
-                        rootViewController?.currentShortcut = index
+                        rootViewController?.currentShortcutNum = index
                         break
                     }
                 }
@@ -35,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             for (index, shortcut) in addedShortcuts.enumerated() {
                 if shortcut.kind.activityType == userActivity.activityType {
                     let rootViewController = self.window?.rootViewController as? PhoneControlerVC
-                    rootViewController?.currentShortcut = index
+                    rootViewController?.currentShortcutNum = index
                     break
                 }
             }
